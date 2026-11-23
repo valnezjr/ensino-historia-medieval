@@ -113,3 +113,11 @@ async function togglePresentation(){
 $('presentButton').onclick=togglePresentation;
 document.addEventListener('fullscreenchange',()=>{const active=!!document.fullscreenElement;$('presentButton').textContent=active?'Sair da tela cheia':'Apresentar';$('presentButton').setAttribute('aria-pressed',active);});
 document.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='f'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!e.target.closest('input,textarea,select')){e.preventDefault();togglePresentation();}});
+
+window.addEventListener('hashchange',()=>{
+ const target=Number(location.hash.slice(1))-1;
+ if(!Number.isInteger(target)||target<0||target>=slides.length||target===current)return;
+ if(zoom.open){zoom.close();zoom.classList.remove('closing');zoomBusy=false;}
+ if(idx.open)idx.close();
+ go(target);
+});
