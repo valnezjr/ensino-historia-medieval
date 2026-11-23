@@ -22,13 +22,13 @@ Abra o endereço acima e use **Apresentar** ou a tecla **F** para tela cheia. O 
 - Os números no endereço, como `#53`, abrem um slide diretamente.
 - Imagens e fontes tipográficas estão incluídas. Links de vídeos, reportagens e PDFs exigem conexão.
 
-O arquivo [roteiro-valnez.txt](roteiro-valnez.txt) contém as orientações de fala, a introdução, a conclusão e o mapa de páginas de *Cavaleiros de papel*.
+O arquivo [roteiro-valnez.txt](roteiro-valnez.txt) contém a fala autoral de Valnez, distribuída em cinco blocos para 25–30 minutos, além das orientações da introdução e da conclusão do grupo. A trilha ocupa os slides 48–63, e a conclusão coletiva, 64–66.
 
 ## Base da trilha de violência
 
 LANZIERI JÚNIOR, Carlile. **Cavaleiros de papel: considerações sobre as histórias conectadas de diferentes usos do passado medieval na contemporaneidade dentro e fora do Brasil e seus possíveis impactos na formação do conhecimento histórico escolar**. In: VIANNA, Luciano José (org.). *A História Medieval entre a formação de professores e o ensino na Educação Básica*. Rio de Janeiro: Autografia, 2021, p. 107–124.
 
-Os slides distinguem as sínteses do capítulo, os documentos contemporâneos e as atividades didáticas propostas para a aula. O episódio de Teresina é citado pelo autor na p. 116; o registro de Paulo Kogos, de 2021, é um caso complementar.
+Os slides distinguem as sínteses do capítulo, os documentos contemporâneos e a leitura autoral proposta para a aula. As dimensões simbólica, física e epistêmica são uma chave de leitura de Valnez, não uma tipologia formal atribuída ao capítulo. A atualização sobre Thiago Braga se apoia na crítica de Matheus de Moura e Silva (Lampiar, 2024), com indicação do vídeo específico do Impérios AD que o estudo examina. O episódio de Teresina é citado pelo autor na p. 116; o registro de Paulo Kogos, de 2021, é um caso complementar.
 
 ## Créditos
 

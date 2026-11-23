@@ -71,3 +71,5 @@ button:active:not(:disabled){animation:ms-pulse var(--motion-pulso-duration) var
 @media(prefers-reduced-motion:reduce){.step-card,.source-mark{transition-duration:.01s}}
 
 .topbar-actions{display:flex;gap:var(--space-3);align-items:center}.source a{color:inherit;text-underline-offset:3px}.source a:hover{color:var(--color-text)}
+
+.sequence-rail{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)}.single-step .card{min-height:220px;display:flex;flex-direction:column;justify-content:center}.single-step .card p{font-size:clamp(21px,2.2vw,32px);max-width:1100px}.single-step .card h3{font-size:clamp(24px,2.5vw,36px)}

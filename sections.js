@@ -78,60 +78,87 @@ window.presentationSections={
   "violence": [
     {
       "track": "Violência",
+      "block": 1,
       "label": "Abertura",
-      "title": "Violência e ensino de História",
-      "sub": "Fontes medievais e usos do passado",
-      "hero": "Como ensinar a violência medieval questionando a ideia de uma “Idade das Trevas”?",
-      "note": "Investigar quem exerce a força, contra quem e sob quais justificativas"
+      "title": "Usos políticos do passado e a formação do conhecimento histórico escolar",
+      "sub": "A instrumentalização da Idade Média e a linguagem de combate no presente",
+      "hero": "Como o passado medieval se torna linguagem de combate no presente?",
+      "note": "Ensino de História e dimensões da violência · Carlile Lanzieri Júnior · UFMT / Vivarium"
     },
     {
       "track": "Violência",
-      "label": "Cavaleiros de papel",
-      "title": "Por que estudar esses cavaleiros?",
-      "sub": "O problema que orienta o capítulo de Carlile Lanzieri Júnior",
+      "block": 1,
+      "label": "Fundamentos teóricos",
+      "title": "Três conceitos para ler as apropriações",
+      "sub": "As distinções discutidas no capítulo",
       "cards": [
         [
-          "Objeto",
-          "Usos políticos do passado medieval em vídeos, imagens e manifestações contemporâneas."
+          "Medievalismo",
+          "Recepção, interpretação e recriação do medievo em culturas posteriores. D’Arcens situa sua presença também nas artes e nas mídias."
         ],
         [
-          "Argumento",
-          "Essas apropriações revelam disputas do presente e selecionam um passado que pretendem legitimar."
+          "Medievalidade",
+          "Em José Rivair Macedo, uma referência de consumo rápido, muitas vezes estereotipada e afastada da pesquisa histórica."
         ],
         [
-          "Ensino",
-          "As imagens circulam além da universidade e participam da formação do conhecimento histórico escolar."
+          "Medievalismo banal",
+          "Com Andrew Elliott, investigar por que referências medievais fazem sentido no cotidiano das mídias e para os seus públicos."
         ]
       ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 107–109. Síntese do argumento.",
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 110–112.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=110"
+    },
+    {
+      "track": "Violência",
+      "block": 1,
+      "label": "Aceleração e cibercultura",
+      "title": "Por que essas narrativas circulam tão rápido?",
+      "sub": "A interpretação de Lanzieri em diálogo com Rosa, Lévy e Pariser",
+      "steps": [
+        [
+          "Tempo acelerado",
+          "Mensagens breves e fragmentadas favorecem um consumo imediato, com pouco espaço para aferir informações."
+        ],
+        [
+          "Cibercultura",
+          "Públicos distantes se conectam e compartilham repertórios e referências ao passado."
+        ],
+        [
+          "Bolhas e memória",
+          "Algoritmos podem reforçar interesses semelhantes, contribuindo para uma memória global e para a identificação de inimigos comuns."
+        ]
+      ],
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 112–114.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=112"
+    },
+    {
+      "track": "Violência",
+      "block": 2,
+      "label": "Casos conectados",
+      "title": "Cavaleiros de papel no Brasil e no mundo",
+      "sub": "Três dos casos examinados por Lanzieri",
+      "cards": [
+        [
+          "Lux Brasil · 2020",
+          "Um cavaleiro a cavalo, com armas e bandeira brasileira, convoca uma manifestação. A fala opõe patriotas a comunistas e traidores."
+        ],
+        [
+          "EDL · Reino Unido",
+          "A English Defence League combina referências cruzadas e lemas em latim com discursos contra muçulmanos e imigrantes."
+        ],
+        [
+          "Charlottesville · 2017",
+          "Supremacistas usam escudos e capacetes de aparência medieval em uma mobilização marcada por confrontos."
+        ]
+      ],
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 107–115.",
       "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=107"
     },
     {
       "track": "Violência",
-      "label": "Hipóteses",
-      "title": "O que um traje permite afirmar?",
-      "sub": "Formule uma hipótese e pense em como investigá-la",
-      "poll": [
-        [
-          "O traje comprova uma continuidade desde a Idade Média.",
-          "Um símbolo pode ser recriado séculos depois. Para estabelecer continuidades, precisamos de evidências sobre sua transmissão e suas mudanças."
-        ],
-        [
-          "A roupa explica, sozinha, toda a situação.",
-          "Uma fotografia registra um instante. A intenção dos participantes e a sequência do episódio exigem outras fontes."
-        ],
-        [
-          "O traje mobiliza uma referência ao passado.",
-          "Essa hipótese pode ser investigada: quais elementos foram selecionados, em que contexto e para quais públicos?"
-        ]
-      ],
-      "source": "Atividade de análise de um uso contemporâneo do passado medieval."
-    },
-    {
-      "track": "Violência",
-      "label": "Laboratório de fonte",
-      "title": "Uma fotografia, três perguntas",
-      "sub": "Selecione um detalhe e investigue como o passado é mobilizado no presente",
+      "label": "Casos / Teresina",
+      "title": "Teresina: símbolos e intimidação",
+      "sub": "21 de dezembro de 2019 · episódio citado por Lanzieri na p. 116",
       "img": "teresina-2019.webp",
       "alt": "Fotografia de uma pessoa com elmo e manto com cruz branca, ao lado de uma policial e de outras pessoas",
       "caption": "Foto: Hélio Alef/GP1. Teresina, 21 de dezembro de 2019. Registro de reportagem sobre um conflito durante manifestação contra a violência às mulheres.",
@@ -171,164 +198,115 @@ window.presentationSections={
             96
           ]
         }
-      ]
+      ],
+      "block": 2
     },
     {
       "track": "Violência",
-      "label": "Interpretação",
-      "title": "O que muda quando lemos a reportagem?",
-      "sub": "Fotografia e texto oferecem evidências diferentes",
+      "block": 2,
+      "label": "Educação em disputa",
+      "title": "Pátria Educadora: qual passado se oferece?",
+      "sub": "A leitura crítica de Lanzieri sobre o documentário da Brasil Paralelo",
       "steps": [
         [
-          "O registro",
-          "A fotografia mostra uma pessoa com elmo e manto com cruz branca em uma cena contemporânea."
+          "Idealização",
+          "O capítulo identifica a apresentação de uma educação medieval ideal como resposta à suposta decadência contemporânea."
         ],
         [
-          "O contexto",
-          "A reportagem do GP1 situa o episódio em uma manifestação em Teresina e reúne versões de participantes."
+          "Projeto educativo",
+          "Lanzieri relaciona essa narrativa à defesa do homeschooling e à oferta de cursos de educação clássica."
         ],
         [
-          "O limite",
-          "A imagem não prova todas as ações ou intenções relatadas. É preciso distinguir registro, depoimento e interpretação."
+          "Omissões",
+          "Sua crítica aponta a ausência de professores da Educação Básica e o apagamento de problemas socioeconômicos estruturais."
         ]
       ],
-      "source": "Fonte: GP1, reportagem de 21/12/2019. Leitura em diálogo com Lanzieri Júnior, 2021."
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 116–117.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=116"
     },
     {
       "track": "Violência",
-      "label": "Problema histórico",
-      "title": "Por que escolher justamente o cavaleiro?",
-      "sub": "Lanzieri propõe um conjunto de explicações para essa escolha",
+      "block": 3,
+      "label": "Chave de leitura",
+      "title": "Três dimensões da violência",
+      "sub": "Uma proposta de leitura de Valnez a partir de Cavaleiros de papel",
       "cards": [
         [
-          "Vitória individual",
-          "O herói guerreiro pode glorificar a força, o mérito e a vitória individual nas disputas cotidianas."
+          "Simbólica",
+          "A linguagem de combate e a figura do defensor heroico ajudam a construir a oposição entre nós e eles."
         ],
         [
-          "Proteção viril",
-          "O cavaleiro aparece como protetor dos seus diante de um inimigo apresentado como ameaça."
+          "Física e intolerância",
+          "Conflitos e intimidação no espaço público atingem mulheres, imigrantes e outros grupos. Cada episódio exige suas próprias evidências."
         ],
         [
-          "Passado idealizado",
-          "A imagem pode sustentar o mito de uma civilização europeia, branca e cristã, apagando diferenças."
+          "Epistêmica",
+          "Narrativas que deslegitimam a pesquisa e a escola disputam quem pode produzir e validar conhecimento histórico."
         ]
       ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 117–119. Síntese do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=117"
-    },
-    {
-      "track": "Violência",
-      "label": "Crítica de fontes",
-      "title": "Fotografia, depoimento e interpretação",
-      "sub": "Cada tipo de evidência exige perguntas próprias",
-      "cards": [
-        [
-          "Fotografia",
-          "Quem fotografou? O que o enquadramento permite ver e o que fica de fora?"
-        ],
-        [
-          "Depoimento",
-          "Quem fala na reportagem e qual posição ocupa no conflito?"
-        ],
-        [
-          "Historiografia",
-          "Como o pesquisador seleciona e articula registros para construir sua explicação?"
-        ]
-      ],
-      "source": "Atividade com o GP1 e Lanzieri Júnior, 2021, p. 114–116: seleção de reportagens, imagens e comparação entre casos."
-    },
-    {
-      "track": "Violência",
-      "label": "Usos do passado",
-      "title": "Medievalismo: por que a imagem faz sentido?",
-      "sub": "Conceitos mobilizados no capítulo para interpretar as apropriações",
-      "steps": [
-        [
-          "Recriar",
-          "Com Louise D’Arcens, Lanzieri trata o medievalismo como recepção, interpretação e recriação do medievo em culturas posteriores."
-        ],
-        [
-          "Compreender",
-          "O “medievalismo banal”, de Andrew Elliott, orienta a perguntar por que essas referências fazem sentido para seus públicos."
-        ],
-        [
-          "Contextualizar",
-          "A análise investiga o contexto da recriação, sua circulação e seus destinatários. A correção do figurino não esgota o problema."
-        ]
-      ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 110–112. Síntese do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=110"
-    },
-    {
-      "track": "Violência",
-      "label": "Cavaleiros de papel / caso de abertura",
-      "title": "Lux Brasil: a encenação de uma missão",
-      "sub": "O vídeo analisado na introdução do capítulo · março de 2020",
-      "cards": [
-        [
-          "Encenação",
-          "Um cavaleiro a cavalo, com armas e bandeira brasileira, convoca o público para uma manifestação política."
-        ],
-        [
-          "Oposição",
-          "A convocação separa “patriotas” de “comunistas” e “traidores da pátria”, convertendo adversários em inimigos."
-        ],
-        [
-          "Interpretação",
-          "Para Lanzieri, a estética cavaleiresca e o apelo religioso oferecem autoridade à mensagem política."
-        ]
-      ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 107–109. Síntese do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=107"
-    },
-    {
-      "track": "Violência",
-      "label": "Cavaleiros de papel / circulação",
-      "title": "Como essas imagens ganham alcance?",
-      "sub": "Redes sociais, aceleração e públicos conectados",
-      "steps": [
-        [
-          "Circular",
-          "Vídeos e imagens aproximam públicos distantes. A referência ao cavaleiro atravessa fronteiras e ganha usos locais."
-        ],
-        [
-          "Acelerar",
-          "Em diálogo com Hartmut Rosa, o capítulo problematiza o consumo rápido de mensagens e a pouca verificação de seu contexto."
-        ],
-        [
-          "Reforçar",
-          "Lanzieri relaciona algoritmos e bolhas culturais à repetição de interesses, símbolos e inimigos comuns."
-        ]
-      ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 112–114. Síntese do argumento.",
+      "source": "Chave de leitura proposta para esta aula; articulação de Lanzieri Júnior, 2021, p. 112–121.",
       "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=112"
     },
     {
       "track": "Violência",
-      "label": "Estudo de caso",
-      "title": "Teresina, dezembro de 2019",
-      "sub": "Um conflito contemporâneo e suas representações",
-      "cards": [
+      "block": 3,
+      "label": "Por que o cavaleiro?",
+      "title": "Cinco eixos de uma figura de combate",
+      "sub": "Síntese das explicações articuladas por Lanzieri",
+      "oneStep": true,
+      "steps": [
         [
-          "O registro",
-          "A notícia do GP1 descreve um confronto e apresenta versões dos envolvidos."
+          "Mérito e vitória individual",
+          "O herói guerreiro pode glorificar a competição cotidiana: vencer aparece como resultado de força, preparo e mérito individual."
         ],
         [
-          "A leitura histórica",
-          "Na página 116 de Cavaleiros de papel, Lanzieri descreve esse mesmo episódio, ocorrido em 21 de dezembro de 2019."
+          "Virilidade e proteção",
+          "O combatente se apresenta como protetor dos seus contra uma ameaça externa, em contextos de ascensão do neofascismo."
         ],
         [
-          "A questão",
-          "Que relação existe entre essa referência ao passado e a disputa por autoridade no presente?"
+          "Pureza civilizatória",
+          "O cavaleiro pode sustentar o mito de um projeto europeu, branco, cristão e patriarcal, ocultando diferenças e relações de dominação."
+        ],
+        [
+          "Militarismo e cultura pop",
+          "Literatura, cinema e séries como Game of Thrones e Knightfall renovam um imaginário de aventura e guerra."
+        ],
+        [
+          "Um inimigo comum",
+          "No Brasil analisado pelo capítulo, referências ocidentais e cristãs são mobilizadas contra movimentos feministas e outras minorias sociais."
         ]
       ],
-      "source": "Fontes: GP1, 21/12/2019; Lanzieri Júnior, Cavaleiros de papel, 2021, p. 116."
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 117–119.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=117"
     },
     {
       "track": "Violência",
-      "label": "Outro uso do passado",
-      "title": "Paulo Kogos: o cavaleiro como imagem política",
-      "sub": "Avenida Paulista, São Paulo · 1º de maio de 2021",
+      "block": 3,
+      "label": "Conhecimento e currículo",
+      "title": "Quem pode dizer o que é História?",
+      "sub": "História alternativa, fundamentalismo histórico e a escola",
+      "cards": [
+        [
+          "Alt history",
+          "Lanzieri mobiliza Valencia-García para discutir narrativas simplificadoras e negacionistas que prometem recuperar tradições perdidas."
+        ],
+        [
+          "Fundamentalismo histórico",
+          "Com Jill Lepore, o texto problematiza a adesão a passados idealizados que bloqueiam o questionamento e a diferença."
+        ],
+        [
+          "Relevância curricular",
+          "O autor critica a proposta de excluir História Medieval em primeiras versões da BNCC e defende sua relevância social."
+        ]
+      ],
+      "source": "Lanzieri Júnior, 2021, p. 112–113 e 119–121. A crítica curricular e as apropriações políticas são problemas relacionados, com contextos distintos.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=119"
+    },
+    {
+      "track": "Violência",
+      "label": "Atualização / Paulo Kogos",
+      "title": "Kogos: performar o cavaleiro no presente",
+      "sub": "Um caso complementar à análise de Lanzieri · São Paulo, 2021",
       "img": "kogos-paulista-2021.png",
       "alt": "Registro de Paulo Kogos com elmo, óculos escuros e traje que imita armadura, com pessoas e bandeiras brasileiras ao fundo",
       "caption": "Paulo Kogos em manifestação na Avenida Paulista, 01/05/2021. Reprodução de vídeo publicado por Flávio Costa no Twitter, via Diário do Centro do Mundo. Barras laterais do registro original.",
@@ -338,7 +316,7 @@ window.presentationSections={
         {
           "name": "Traje",
           "heading": "Que passado o traje evoca?",
-          "text": "Observe o elmo e a roupa que imita uma armadura. Que referências à figura do cavaleiro constroem essa aparência?",
+          "text": "Elmo e roupa que imita armadura produzem uma referência ao guerreiro medieval. Como o traje constrói a presença pública do participante?",
           "box": [
             45,
             24,
@@ -349,7 +327,7 @@ window.presentationSections={
         {
           "name": "Presente",
           "heading": "Que elementos situam a cena?",
-          "text": "Óculos escuros, bandeiras brasileiras e o cenário urbano aparecem junto ao traje. Que efeito essa combinação pode produzir?",
+          "text": "A estética cavaleiresca aparece junto de óculos escuros, bandeiras brasileiras e uma manifestação atual. Que passado é selecionado nessa combinação?",
           "box": [
             62,
             29,
@@ -359,8 +337,8 @@ window.presentationSections={
         },
         {
           "name": "Mensagem",
-          "heading": "Como a roupa participa do discurso?",
-          "text": "Segundo a reportagem, Kogos declara apoio a Bolsonaro e associa a manifestação a “repor a ordem” e “retomar a liberdade”. Como o traje pode reforçar essa mensagem?",
+          "heading": "Quem se apresenta como defensor?",
+          "text": "Em entrevista ao TAB (2020), Kogos associa os templários à defesa da fé e dos vulneráveis. Como essa autodescrição reivindica uma posição moral?",
           "box": [
             36,
             24,
@@ -368,134 +346,147 @@ window.presentationSections={
             75
           ]
         }
+      ],
+      "block": 4
+    },
+    {
+      "track": "Violência",
+      "block": 4,
+      "label": "Atualização / difusão digital",
+      "title": "Brasão de Armas e a disputa pela autoridade",
+      "sub": "Thiago Braga: produção de história no YouTube e crítica historiográfica",
+      "cards": [
+        [
+          "Dois canais",
+          "Braga produz Brasão de Armas e Impérios AD. Silva (2024) discute sua estética medieval, a alegação de imparcialidade e o alinhamento à direita."
+        ],
+        [
+          "Uma crítica documentada",
+          "No vídeo do Impérios AD sobre o tráfico de escravizados, Silva critica o tratamento de cartas históricas como prova suficiente da narrativa."
+        ],
+        [
+          "O problema do método",
+          "Um documento exige contexto e confronto com outras fontes. A crítica deve identificar a afirmação examinada e demonstrar seus limites."
+        ]
+      ],
+      "source": "Silva, Matheus de Moura e. Revisionismo e negacionismo histórico em tempos de YouTube. Lampiar, 2024, p. 364–365. A análise específica citada é do Impérios AD.",
+      "readingUrl": "https://periodicos.apps.uern.br/index.php/LAMP/article/download/5888/4167/18316#page=10"
+    },
+    {
+      "track": "Violência",
+      "block": 4,
+      "label": "Confrontar fontes",
+      "title": "Da influência ao exame da evidência",
+      "sub": "Materiais para uma análise verificável das narrativas digitais",
+      "sources": [
+        [
+          "Brasão de Armas · A arte na Idade Média: o brasão de armas e a heráldica (2022)",
+          "https://www.youtube.com/watch?v=G0kPE865Y00"
+        ],
+        [
+          "Impérios AD · O tráfico de escravos e a origem da escravidão no Brasil (2020)",
+          "https://www.youtube.com/watch?v=4dL_aBQeWHs"
+        ],
+        [
+          "Silva (2024) · Ler a crítica acadêmica, p. 364–365",
+          "https://periodicos.apps.uern.br/index.php/LAMP/article/download/5888/4167/18316#page=10"
+        ]
+      ],
+      "source": "Perguntas para a análise: qual afirmação é feita, em que fonte se apoia e como o contexto é construído? Popularidade e credenciais não substituem o exame do argumento."
+    },
+    {
+      "track": "Violência",
+      "block": 5,
+      "label": "História Pública e escola",
+      "title": "A escola como espaço de resistência",
+      "sub": "Histórias conectadas, descolonização e formação cidadã",
+      "cards": [
+        [
+          "Pluralidade",
+          "Questionar a imagem de uma Idade Média inteiramente branca, cristã e isolada, trabalhando diferenças e trocas culturais."
+        ],
+        [
+          "Histórias conectadas",
+          "Investigar relações entre espaços sem pressupor a Europa como centro único ou modelo universal."
+        ],
+        [
+          "História Pública",
+          "Dialogar com públicos além da universidade e oferecer instrumentos para analisar as histórias que circulam nas mídias."
+        ]
+      ],
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 119–121.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=119"
+    },
+    {
+      "track": "Violência",
+      "block": 5,
+      "label": "Considerações finais",
+      "title": "Ensinar História é sustentar o questionamento",
+      "sub": "Ceticismo, evidência e compromisso com a diferença",
+      "steps": [
+        [
+          "Reconhecer os mitos",
+          "Com Trouillot, o capítulo alerta para o risco de uma sociedade se tornar refém dos passados que cria."
+        ],
+        [
+          "Exercitar o ceticismo",
+          "Com Sagan, lembra que uma fábula de ampla circulação não equivale a uma explicação crítica e fundamentada."
+        ],
+        [
+          "Transformar a leitura",
+          "Contextualizar mensagens, confrontar evidências e revisar hipóteses são práticas para uma formação cidadã contra a intolerância."
+        ]
+      ],
+      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 120–122.",
+      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=120"
+    },
+    {
+      "track": "Violência",
+      "block": 5,
+      "label": "Referências / base e documentos",
+      "title": "Fontes da trilha de violência",
+      "sub": "Eixo historiográfico e registros dos casos brasileiros",
+      "sources": [
+        [
+          "LANZIERI JÚNIOR, Carlile. Cavaleiros de papel. In: VIANNA, Luciano José (org.). A História Medieval entre a formação de professores e o ensino na Educação Básica. Autografia, 2021, p. 107–124.",
+          "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=107"
+        ],
+        [
+          "DIAS; WELLINGTON; RICARDO. Grupo entra em confronto com mulheres durante manifestação em Teresina. GP1, 21 dez. 2019. Foto: Hélio Alef.",
+          "https://www.gp1.com.br/pi/piaui/noticia/2019/12/21/grupo-entra-em-confronto-com-mulheres-durante-manifestacao-em-teresina-468621.html"
+        ],
+        [
+          "MILLER, Fernando. “Cavaleiro templário” Paulo Kogos comparece na manifestação bolsonarista. DCM, 1 maio 2021. Vídeo: Flávio Costa/Twitter.",
+          "https://www.diariodocentrodomundo.com.br/essencial/cavaleiro-templario-paulo-kogos-comparece-na-manifestacao-bolsonarista/"
+        ],
+        [
+          "SAMPAIO, Paulo. Entrevista com Paulo Kogos. TAB/UOL, 5 nov. 2020.",
+          "https://tab.uol.com.br/noticias/redacao/2020/11/05/nunca-namorei-na-vida-diz-paulo-kogos-influencer-com-116-mil-seguidores.htm"
+        ]
       ]
     },
     {
       "track": "Violência",
-      "label": "Interpretação em debate",
-      "title": "Da aparência guerreira ao argumento político",
-      "sub": "Uma hipótese de leitura a testar com as fontes",
-      "steps": [
-        [
-          "Identidade",
-          "O traje pode aproximar o participante de um defensor heroico. Essa é uma hipótese de leitura, inspirada nas perguntas de Lanzieri, a testar neste caso."
-        ],
-        [
-          "Conflito",
-          "A reportagem apresenta reivindicações de ordem e liberdade. Que ameaça é sugerida e que ação é defendida?"
-        ],
-        [
-          "Limite",
-          "Uma imagem guerreira não comprova uma ação violenta. Investigar a legitimação da força exige confrontar falas, condutas e outras fontes."
-        ]
-      ],
-      "source": "Fonte do caso: Miller, DCM, 01/05/2021. Chave de leitura: Lanzieri Júnior, 2021, p. 117–119."
-    },
-    {
-      "track": "Violência",
-      "label": "Comparação",
-      "title": "Fotografia e texto dizem a mesma coisa?",
-      "sub": "Compare os registros de Teresina e da Avenida Paulista antes de concluir",
-      "poll": [
-        [
-          "A fotografia prova todos os relatos da reportagem.",
-          "Ela pode sustentar certas descrições visuais, mas não mostra toda a sequência dos acontecimentos nem todas as falas."
-        ],
-        [
-          "A reportagem reúne versões que também precisam ser analisadas.",
-          "Sim. Identifique os interlocutores, o que afirmam e quais evidências permitem confrontar suas versões."
-        ],
-        [
-          "A interpretação do historiador substitui a leitura das fontes.",
-          "O argumento historiográfico pode orientar a investigação, mas suas evidências e escolhas continuam abertas ao exame."
-        ]
-      ],
-      "source": "Atividade com as imagens e reportagens do GP1 e do DCM, em diálogo com a análise de Lanzieri Júnior."
-    },
-    {
-      "track": "Violência",
-      "label": "Cavaleiros de papel / ensino",
-      "title": "Que Idade Média fica fora dessa imagem?",
-      "sub": "A proposta de superar um passado mítico e homogêneo",
-      "cards": [
-        [
-          "Diferenças",
-          "Questionar uma Idade Média apresentada como inteiramente branca, cristã e culturalmente uniforme."
-        ],
-        [
-          "Conexões",
-          "Investigar encontros e trocas culturais em diferentes espaços, sem tomar a Europa como centro único da história."
-        ],
-        [
-          "Públicos",
-          "Dialogar com as interpretações que circulam na escola e fora dela; aproximar pesquisa, ensino e História Pública."
-        ]
-      ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 119–121. Síntese do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=119"
-    },
-    {
-      "track": "Violência",
-      "label": "Ensino de História",
-      "title": "Uma atividade de investigação",
-      "sub": "Uma proposta didática a partir das questões levantadas pelo capítulo",
-      "steps": [
-        [
-          "Registrar",
-          "Anote a imagem de Idade Média evocada pelo traje e as evidências que sustentam sua hipótese."
-        ],
-        [
-          "Confrontar",
-          "Compare registros e contextos. Pergunte quem produz a mensagem, para qual público e qual passado seleciona."
-        ],
-        [
-          "Reformular",
-          "Revise a hipótese e indique uma diferença ou conexão histórica que a imagem idealizada deixa de fora."
-        ]
-      ],
-      "source": "Adaptação didática das questões de Lanzieri Júnior, 2021, p. 119–121. Avaliar contexto, evidência e revisão do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=119"
-    },
-    {
-      "track": "Violência",
-      "label": "Síntese",
-      "title": "O que Cavaleiros de papel nos ensina?",
-      "sub": "Apropriações do passado como problema para a aula de História",
-      "banner": "A análise dos usos do passado ajuda a compreender disputas do presente",
-      "cards": [
-        [
-          "Investigar",
-          "A estética do cavaleiro exige perguntas sobre produtores, públicos, inimigos e justificativas."
-        ],
-        [
-          "Diferenciar",
-          "Uma referência medieval contemporânea não equivale à sociedade histórica que ela pretende representar."
-        ],
-        [
-          "Ensinar",
-          "Questionar idealizações e trabalhar diferenças e conexões torna o ensino de História Medieval socialmente relevante."
-        ]
-      ],
-      "source": "Lanzieri Júnior, Cavaleiros de papel, 2021, p. 119–121. Síntese do argumento.",
-      "readingUrl": "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=119"
-    },
-    {
-      "track": "Violência",
-      "label": "Referências",
-      "title": "Fontes da trilha de violência",
-      "sub": "Pesquisa historiográfica e análise documental",
+      "block": 5,
+      "label": "Referências / atualização",
+      "title": "Fontes complementares da análise digital",
+      "sub": "Crítica acadêmica, documentos audiovisuais e identificação institucional",
       "sources": [
         [
-          "LANZIERI JÚNIOR, Carlile. Cavaleiros de papel. In: VIANNA, Luciano José (org.). A História Medieval entre a formação de professores e o ensino na Educação Básica. Rio de Janeiro: Autografia, 2021, p. 107–124.",
-          "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=107"
+          "SILVA, Matheus de Moura e. Revisionismo e negacionismo histórico em tempos de YouTube. Lampiar, v. 3, n. 1, 2024, p. 355–369.",
+          "https://periodicos.apps.uern.br/index.php/LAMP/article/download/5888/4167/18316"
         ],
         [
-          "DIAS, Carolina; WELLINGTON, Fábio; RICARDO, Willyam. Grupo entra em confronto com mulheres durante manifestação em Teresina. GP1, 21 dez. 2019. Fotografia: Hélio Alef/GP1.",
-          "https://www.gp1.com.br/pi/piaui/noticia/2019/12/21/grupo-entra-em-confronto-com-mulheres-durante-manifestacao-em-teresina-468621.html"
+          "BRASÃO DE ARMAS. A arte na Idade Média: o brasão de armas e a heráldica. YouTube, 10 abr. 2022.",
+          "https://www.youtube.com/watch?v=G0kPE865Y00"
         ],
         [
-          "MILLER, Fernando. “Cavaleiro templário” Paulo Kogos comparece na manifestação bolsonarista. Diário do Centro do Mundo, 1 maio 2021. Registro de vídeo: Flávio Costa/Twitter.",
-          "https://www.diariodocentrodomundo.com.br/essencial/cavaleiro-templario-paulo-kogos-comparece-na-manifestacao-bolsonarista/"
+          "IMPÉRIOS AD. O tráfico de escravos e a origem da escravidão no Brasil. YouTube, 12 mar. 2020.",
+          "https://www.youtube.com/watch?v=4dL_aBQeWHs"
+        ],
+        [
+          "FAETERJ Petrópolis. Professor Thiago Braga recebe Prêmio iBest. Registro institucional de atuação docente.",
+          "https://www.faeterj-petropolis.edu.br/post/professor-da-faeterj-petr%C3%B3polis-thiago-braga-recebe-pr%C3%AAmio-ibest"
         ]
       ]
     }
