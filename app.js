@@ -1,58 +1,824 @@
 const slides=[
-{label:'Abertura',title:'Saúde e epidemias na Idade Média',sub:'A Peste Negra como tema de ensino',hero:'Como as sociedades reagem a uma epidemia?',note:''},
-{label:'Ensino',title:'Por que estudar a peste na escola?',sub:'A pesquisa histórica e as experiências dos estudantes',cards:[['Estereótipos','Questionar a ideia de uma Idade Média homogênea e “das trevas”.'],['Comparação','Relacionar epidemias de épocas diferentes, respeitando seus contextos.'],['Cidadania','Analisar medo, desigualdade, solidariedade e perseguições.']]},
-{label:'Contexto',title:'A peste no século XIV',sub:'Doença, circulação e impacto social',textTitle:'Yersinia pestis',paragraphs:['A bactéria pode ser transmitida por pulgas infectadas.','A forma pneumônica também pode passar entre pessoas por partículas respiratórias.'],img:'image1.png',alt:'Mapa das rotas comerciais europeias no século XIV',caption:'Rotas comerciais europeias no século XIV. J. J. A. Arruda, Atlas histórico básico, 2007. O mapa representa comércio, não a propagação da peste.',source:'Saúde: Organização Mundial da Saúde, Plague.'},
-{label:'Fontes visuais',title:'Fé e proteção diante da peste',sub:'Imagem religiosa como fonte histórica',textTitle:'Santos intercessores',paragraphs:['A obra reúne santos associados à proteção e à cura.','Ela permite investigar práticas de devoção após surtos de peste.'],img:'image2.jpg',alt:'Políptico de Andrea da Murano com santos e Nossa Senhora',caption:'Andrea da Murano, Políptico, c. 1478. Gallerie dell’Accademia, Veneza. Referência: Web Gallery of Art.'},
-{label:'Reações sociais',title:'Crise, religião e violência',sub:'As respostas à peste variaram entre grupos e lugares',cards:[['Crenças','Algumas pessoas interpretaram a epidemia em termos religiosos e recorreram à oração e à penitência.'],['Desigualdade','As possibilidades de escapar ou receber cuidados variavam conforme recursos e posição social.'],['Perseguição','Acusações contra judeus alimentaram perseguições e massacres durante a crise.']]},
-{label:'Imagens e memória',title:'São Sebastião e a proteção contra epidemias',sub:'A representação visual de um santo pode mudar conforme a época',textTitle:'O que observar?',paragraphs:['Quais elementos identificam o santo?','Como a imagem constrói uma ideia de sofrimento e proteção?'],img:'image3.jpg',alt:'Pintura de São Sebastião atingido por flechas',caption:'São Sebastião atingido por flechas. Representação pictórica do martírio do santo.'},
-{label:'Mídias',title:'Quatro vídeos da TV PEM',sub:'Clique em um título para abrir o vídeo no YouTube',cards:[['Santos em Imagens · episódio 3','A Peste Negra e a veneração aos santos','https://www.youtube.com/watch?v=z6gAxdB1c8k'],['Santos em Imagens · episódio 4','São Sebastião intercedendo pela peste','https://www.youtube.com/watch?v=ZhlgjgxYj7Y'],['A Idade Média no Cinema · quiz 1','A Peste','https://www.youtube.com/watch?v=-1OUEynHF88'],['Santos em Imagens · episódio 12','Santa Corona e o Altar da Catedral de Siena','https://www.youtube.com/watch?v=x9VVTkiN_t0']]},
-{label:'Desinformação',title:'Santa Corona e narrativas de crise',sub:'A análise de imagens exige verificar sua origem e contexto',textTitle:'Perguntas para a turma',paragraphs:['Quem publicou a informação?','Qual é a fonte da imagem?','O que pode ser confirmado em outras fontes?'],img:'image4.jpg',alt:'Pintura de uma santa com palma e coroa',caption:'Santa Corona. Painel do século XIV, conservado no Statens Museum for Kunst, Copenhague.'},
-{label:'Atividade',title:'Comparar epidemias sem apagar diferenças',sub:'Proposta de investigação em grupos',cards:[['01 · Pesquisar','Escolher um aspecto: circulação, cuidado, respostas sociais ou desinformação.'],['02 · Comparar','Identificar semelhanças e diferenças entre a peste e uma epidemia recente.'],['03 · Comunicar','Produzir um infográfico com fontes e uma conclusão do grupo.']]},
-{label:'Síntese',title:'O que a peste nos permite aprender?',sub:'Saúde como questão histórica e social',banner:'Epidemias revelam relações entre saúde, crenças e poder',cards:[['Fontes','Analisar imagens, textos e mídias.'],['Comparação','Respeitar as diferenças entre épocas.'],['Reflexão','Discutir desigualdades e solidariedade.']]},
-{label:'Referências',title:'Fontes da trilha de saúde',sub:'Referências históricas, médicas e visuais',sources:[['Organização Mundial da Saúde · Plague','https://www.who.int/news-room/fact-sheets/detail/plague'],['TV PEM UFRJ · A Peste Negra e a veneração aos santos','https://www.youtube.com/watch?v=z6gAxdB1c8k'],['Web Gallery of Art · Andrea da Murano, Polyptych','https://www.wga.hu/html_m/a/andrea/murano/polyptic.html'],['SILVA, Leila Rodrigues da; SILVA, Andréia Cristina Lopes Frazão da. Propostas didáticas para o ensino da história das pandemias. In: A Idade Média: ensino e aprendizagem, 2023.','https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf'],['Arruda, José Jobson de A. · Atlas histórico básico, 2007','']]}
+  {
+    "label": "Abertura",
+    "title": "Saúde e epidemias na Idade Média",
+    "sub": "A Peste Negra como tema de ensino",
+    "hero": "Como as sociedades reagem a uma epidemia?",
+    "note": ""
+  },
+  {
+    "label": "Ensino",
+    "title": "Por que estudar a peste na escola?",
+    "sub": "A pesquisa histórica e as experiências dos estudantes",
+    "cards": [
+      [
+        "Estereótipos",
+        "Questionar a ideia de uma Idade Média homogênea e “das trevas”."
+      ],
+      [
+        "Comparação",
+        "Relacionar epidemias de épocas diferentes, respeitando seus contextos."
+      ],
+      [
+        "Cidadania",
+        "Analisar medo, desigualdade, solidariedade e perseguições."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Contexto",
+    "title": "A peste no século XIV",
+    "sub": "Doença, circulação e impacto social",
+    "textTitle": "Yersinia pestis",
+    "paragraphs": [
+      "A bactéria pode ser transmitida por pulgas infectadas.",
+      "A forma pneumônica também pode passar entre pessoas por partículas respiratórias."
+    ],
+    "img": "image1.png",
+    "alt": "Mapa das rotas comerciais europeias no século XIV",
+    "caption": "Mapa das rotas comerciais europeias no século XIV. Fonte: Arruda (2007). O mapa representa comércio, não a propagação da peste.",
+    "source": "World Health Organization (2026).",
+    "sourceUrl": "referencias.html#arruda",
+    "sourceLabel": "Consultar fonte",
+    "readingUrl": "https://www.who.int/news-room/fact-sheets/detail/plague"
+  },
+  {
+    "label": "Circulação",
+    "title": "A peste e as rotas de circulação",
+    "sub": "Século XIV: conexões comerciais e disseminação da doença",
+    "cards": [
+      [
+        "Contexto",
+        "A expansão das trocas conectava cidades, portos e regiões do Mediterrâneo."
+      ],
+      [
+        "Crimeia",
+        "Caffa aparece em relatos sobre a chegada da peste ao Mediterrâneo, embora as rotas de disseminação sejam complexas."
+      ],
+      [
+        "Impacto",
+        "As estimativas de mortalidade variam. Silva e Silva (2023) apresentam a faixa de um quarto a um terço da população europeia, com impactos regionais desiguais."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Experiências",
+    "title": "Diante da morte e da incerteza",
+    "sub": "As fontes descrevem respostas diferentes à epidemia",
+    "cards": [
+      [
+        "Penitência",
+        "Práticas de oração, devoção aos santos e autoflagelação aparecem em relatos da época."
+      ],
+      [
+        "Prazer e fuga",
+        "O Decameron de Boccaccio apresenta personagens que deixam Florença e narram histórias durante a peste."
+      ],
+      [
+        "Representações",
+        "A Dança Macabra, difundida em obras posteriores, evocou a morte através de imagens e textos."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Fontes visuais",
+    "title": "Fé e proteção diante da peste",
+    "sub": "Imagem religiosa como fonte histórica",
+    "textTitle": "Santos intercessores",
+    "paragraphs": [
+      "A obra reúne santos associados à proteção e à cura.",
+      "Ela permite investigar práticas de devoção após surtos de peste."
+    ],
+    "img": "image2.jpg",
+    "alt": "Políptico de Andrea da Murano com santos e Nossa Senhora",
+    "caption": "ANDREA DA MURANO. Polyptych, ca. 1478. Gallerie dell’Accademia, Veneza. Fonte: Web Gallery of Art.",
+    "sourceUrl": "https://www.wga.hu/html_m/a/andrea/murano/polyptic.html",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "label": "Imagens e memória",
+    "title": "São Sebastião e a proteção contra epidemias",
+    "sub": "A representação visual de um santo pode mudar conforme a época",
+    "textTitle": "O que observar?",
+    "paragraphs": [
+      "Quais elementos identificam o santo?",
+      "Como a imagem constrói uma ideia de sofrimento e proteção?"
+    ],
+    "img": "image3.jpg",
+    "alt": "Pintura de São Sebastião atingido por flechas",
+    "caption": "RIBERA, Jusepe de. San Sebastián, 1636. Óleo sobre tela. Museo Nacional del Prado, inv. P001095. Reprodução: Wikimedia Commons.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ribera-san_sebastian.jpg",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "label": "Mídias",
+    "title": "Quatro vídeos da TV PEM",
+    "sub": "Clique em um título para abrir o vídeo no YouTube",
+    "cards": [
+      [
+        "Santos em Imagens · episódio 3",
+        "A Peste Negra e a veneração aos santos",
+        "https://www.youtube.com/watch?v=z6gAxdB1c8k"
+      ],
+      [
+        "Santos em Imagens · episódio 4",
+        "São Sebastião intercedendo pela peste",
+        "https://www.youtube.com/watch?v=ZhlgjgxYj7Y"
+      ],
+      [
+        "A Idade Média no Cinema · quiz 1",
+        "A Peste",
+        "https://www.youtube.com/watch?v=-1OUEynHF88"
+      ],
+      [
+        "Santos em Imagens · episódio 12",
+        "Santa Corona e o Altar da Catedral de Siena",
+        "https://www.youtube.com/watch?v=x9VVTkiN_t0"
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Desinformação",
+    "title": "Santa Corona e narrativas de crise",
+    "sub": "A análise de imagens exige verificar sua origem e contexto",
+    "textTitle": "Perguntas para a turma",
+    "paragraphs": [
+      "Quem publicou a informação?",
+      "Qual é a fonte da imagem?",
+      "O que pode ser confirmado em outras fontes?"
+    ],
+    "img": "image4.jpg",
+    "alt": "Pintura de uma santa com palma e coroa",
+    "caption": "MESTRE DA MADONNA DO PALAZZO VENEZIA. Santa Corona, século XIV. Têmpera e ouro sobre madeira. Statens Museum for Kunst. Reprodução: Wikimedia Commons.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Corona.jpg",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "label": "Atividades",
+    "title": "Da pesquisa à produção dos estudantes",
+    "sub": "Propostas de investigação, criação e análise de fontes",
+    "cards": [
+      [
+        "Mapear e entrevistar",
+        "Mapear rotas e entrevistar pessoas sobre impactos socioeconômicos da pandemia recente."
+      ],
+      [
+        "Criar",
+        "Produzir um infográfico coletivo ou expressar experiências em desenhos, poemas, crônicas ou vídeos."
+      ],
+      [
+        "Verificar",
+        "Construir um protocolo para checar notícias sobre saúde nas redes sociais."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Propostas didáticas",
+    "title": "Outras atividades para a turma",
+    "sub": "Diferentes formas de investigar epidemias em sala de aula",
+    "cards": [
+      [
+        "Rotas e experiências",
+        "Mapear circuitos e comparar impactos de epidemias em contextos diferentes."
+      ],
+      [
+        "Comunidade e expressão",
+        "Entrevistar pessoas sobre a pandemia recente ou criar poemas, desenhos e relatos."
+      ],
+      [
+        "Checagem",
+        "Construir um roteiro para verificar notícias e imagens sobre saúde."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Atividade",
+    "title": "Comparar epidemias sem apagar diferenças",
+    "sub": "Proposta de investigação em grupos",
+    "cards": [
+      [
+        "01 · Pesquisar",
+        "Escolher um aspecto: circulação, cuidado, respostas sociais ou desinformação."
+      ],
+      [
+        "02 · Comparar",
+        "Identificar semelhanças e diferenças entre a peste e uma epidemia recente."
+      ],
+      [
+        "03 · Comunicar",
+        "Produzir um infográfico com fontes e uma conclusão do grupo."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Síntese",
+    "title": "O que a peste nos permite aprender?",
+    "sub": "Saúde como questão histórica e social",
+    "banner": "Epidemias revelam relações entre saúde, crenças e poder",
+    "cards": [
+      [
+        "Fontes",
+        "Analisar imagens, textos e mídias."
+      ],
+      [
+        "Comparação",
+        "Respeitar as diferenças entre épocas."
+      ],
+      [
+        "Reflexão",
+        "Discutir desigualdades e solidariedade."
+      ]
+    ],
+    "source": "Silva; Silva (2023, p. 162–177).",
+    "readingUrl": "https://profhistoria.uem.br/publicacoes/a-idade-media-ensino-de-aprendizagem-10-nov-2023.pdf#page=163"
+  },
+  {
+    "label": "Referências",
+    "title": "Fontes da trilha de saúde",
+    "sub": "Referências bibliográficas · acesso à lista completa em ABNT",
+    "references": [
+      "pandemias",
+      "who",
+      "arruda",
+      "murano",
+      "ribera",
+      "corona",
+      "peste-video",
+      "sebastiao-video",
+      "quiz-video",
+      "corona-video"
+    ]
+  },
+  {
+    "track": "Gênero",
+    "label": "Abertura",
+    "title": "Pelo pão de cada dia",
+    "sub": "Mulheres medievais, trabalho e ensino de História",
+    "hero": "Que trabalhos as mulheres exerceram na sociedade medieval?",
+    "note": "Europa medieval · principalmente séculos XIII a XVI"
+  },
+  {
+    "track": "Gênero",
+    "label": "Historiografia",
+    "title": "Para além da invisibilidade",
+    "sub": "As fontes mostram experiências diversas de trabalho",
+    "cards": [
+      [
+        "Presença",
+        "Mulheres atuaram no comércio, nas oficinas, na saúde e em atividades intelectuais."
+      ],
+      [
+        "Espaços",
+        "O trabalho familiar, doméstico e urbano se cruzava de formas diferentes conforme lugar e condição social."
+      ],
+      [
+        "Ciclo de vida",
+        "Solteiras, casadas e viúvas podiam ter vínculos e possibilidades de trabalho distintos."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Trabalho urbano",
+    "title": "Ofícios, comércio e corporações",
+    "sub": "O crescimento das cidades ampliou a diversidade de ocupações",
+    "cards": [
+      [
+        "Têxtil",
+        "Fiação, tecelagem, bordado de seda e fabricação de artigos."
+      ],
+      [
+        "Alimentos",
+        "Venda de peixe e hortaliças, produção de pão e outros ofícios de abastecimento."
+      ],
+      [
+        "Corporações",
+        "Em Basileia, a corporação de peleiros reconheceu direitos a homens e mulheres em 1226, segundo o artigo."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Desigualdade",
+    "title": "Trabalho e vulnerabilidade",
+    "sub": "A presença feminina nos ofícios não significava igualdade",
+    "cards": [
+      [
+        "Oficinas",
+        "Algumas mulheres atuavam em negócios familiares ou dirigiam oficinas, inclusive após a viuvez."
+      ],
+      [
+        "Recursos",
+        "Muitas trabalhadoras do setor têxtil não possuíam os próprios instrumentos e dependiam de mestres."
+      ],
+      [
+        "Restrições",
+        "Em determinados contextos, concorrência e normas corporativas limitaram o acesso aos ofícios."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Saúde",
+    "title": "Mulheres, medicina e cuidado",
+    "sub": "Uma conexão entre as trilhas de gênero e saúde",
+    "cards": [
+      [
+        "Ofícios",
+        "Parteiras, cuidadoras, boticárias e cirurgiãs exerceram práticas de saúde em contextos variados."
+      ],
+      [
+        "Formação",
+        "A institucionalização universitária e as regulações profissionais contribuíram para restringir sua atuação em certos lugares."
+      ],
+      [
+        "Registros",
+        "O artigo cita pelo menos 16 médicas documentadas em Frankfurt no século XV, muitas delas judias."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Fonte visual",
+    "title": "Mulheres nos canteiros de obras",
+    "sub": "Uma iluminura como ponto de partida para a investigação",
+    "textTitle": "O que a imagem mostra?",
+    "paragraphs": [
+      "Berte e sua criada aparecem trabalhando na construção de Vézelay, enquanto Girart observa a cena.",
+      "Que diferenças sociais e que funções podemos perceber?"
+    ],
+    "img": "berte.jpg",
+    "alt": "Iluminura de Berte e sua criada transportando materiais para a construção de Vézelay",
+    "caption": "ROMAN de Girart de Roussillon, ca. 1448. Cod. 2549, f. 167v. Österreichische Nationalbibliothek, Viena. Reprodução identificada em Trevisan e Lima (2022).",
+    "sourceUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560#page=12",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "track": "Gênero",
+    "label": "Análise de fonte",
+    "title": "A imagem também constrói uma narrativa",
+    "sub": "Representação, trabalho e condição social",
+    "cards": [
+      [
+        "Narrativa",
+        "A cena integra uma história de caráter hagiográfico que exalta a santidade de Berte."
+      ],
+      [
+        "Evidência",
+        "Ela abre perguntas sobre o trabalho feminino, mas não deve ser tomada como retrato neutro de todas as trabalhadoras."
+      ],
+      [
+        "Outras fontes",
+        "Registros de construção apontam mulheres em tarefas como transporte de materiais e outras ocupações nos canteiros."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Legislação e violência",
+    "title": "Trabalho, suspeita e autoridade régia",
+    "sub": "Portugal: as Ordenações Afonsinas como fonte para a sala de aula",
+    "cards": [
+      [
+        "O problema",
+        "Mulheres que prestavam serviços a clérigos podiam ser alvo de suspeitas e difamação."
+      ],
+      [
+        "A ordenação",
+        "O texto distingue serviços considerados honestos de relações que a lei punia e prevê proteção sob certas condições."
+      ],
+      [
+        "Questão histórica",
+        "O que a lei revela sobre trabalho, normas morais e poder das autoridades?"
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Atividade",
+    "title": "Lendo a imagem e a lei",
+    "sub": "Duas propostas a partir do artigo de Trevisan e Lima",
+    "cards": [
+      [
+        "Observar",
+        "Na iluminura, identifique personagens, tarefas, roupas e elementos do canteiro."
+      ],
+      [
+        "Interpretar",
+        "Na lei, investigue quem acusa, quem trabalha e quais condições aparecem para a proteção."
+      ],
+      [
+        "Comparar",
+        "Como gênero e posição social influenciam os trabalhos e as representações?"
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Síntese",
+    "title": "Trabalho feminino e ensino de História",
+    "sub": "Retomada da pergunta inicial",
+    "banner": "As mulheres exerceram trabalhos diversos e enfrentaram condições desiguais",
+    "cards": [
+      [
+        "Visibilidade",
+        "Examinar fontes ajuda a recuperar experiências frequentemente omitidas."
+      ],
+      [
+        "Contexto",
+        "Os papéis e as oportunidades variavam conforme lugar, tempo e condição social."
+      ],
+      [
+        "Presente",
+        "Comparar problemas de diferentes épocas exige atenção às suas diferenças históricas."
+      ]
+    ],
+    "source": "Trevisan; Lima (2022).",
+    "readingUrl": "https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560"
+  },
+  {
+    "track": "Gênero",
+    "label": "Referências",
+    "title": "Fontes da trilha de gênero",
+    "sub": "Referências bibliográficas · acesso à lista completa em ABNT",
+    "references": [
+      "trevisan",
+      "girart",
+      "afonsinas"
+    ]
+  },
+  {
+    "track": "Fé",
+    "label": "Abertura",
+    "title": "Fé no ensino de História",
+    "sub": "Cavalaria e devoção nas Cantigas de Santa Maria",
+    "hero": "Como a fé participa da construção de valores e relações de poder?",
+    "note": "Corte de Afonso X · Península Ibérica · século XIII"
+  },
+  {
+    "track": "Fé",
+    "label": "Ensino de História",
+    "title": "Pesquisa histórica e escola básica",
+    "sub": "A aproximação entre universidade e sala de aula",
+    "cards": [
+      [
+        "Problema",
+        "Carvalho identifica um distanciamento entre a renovação das pesquisas e certas abordagens escolares da Idade Média."
+      ],
+      [
+        "Renovação",
+        "O estudo da Península Ibérica amplia os temas, os sujeitos e as fontes disponíveis para a aula."
+      ],
+      [
+        "Formação",
+        "Trabalhar com textos e imagens permite discutir a construção do conhecimento histórico."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Livros didáticos",
+    "title": "Ampliando os recortes sobre o medievo",
+    "sub": "A Península Ibérica permite explorar outras experiências históricas",
+    "cards": [
+      [
+        "Espaços",
+        "Leão e Castela ajudam a ampliar um ensino frequentemente concentrado em regiões francas e anglo-saxônicas."
+      ],
+      [
+        "Temas",
+        "Literatura, religiosidade e cultura visual complementam o estudo do feudalismo e das cruzadas."
+      ],
+      [
+        "Alteridade",
+        "Cristãos, muçulmanos e judeus viveram relações de convivência, conflito e desigualdade que exigem contextualização."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Cultura visual",
+    "title": "Imagens como fontes históricas",
+    "sub": "Uma leitura que interroga produção, linguagem e intenção",
+    "cards": [
+      [
+        "Produção",
+        "Quem produziu a imagem? Para quem? Em quais circunstâncias?"
+      ],
+      [
+        "Linguagem",
+        "O que gestos, roupas, enquadramentos e legendas tornam visível?"
+      ],
+      [
+        "Sequência",
+        "As iluminuras podem ser comparadas à linguagem dos quadrinhos, respeitando as diferenças de época e função."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Contexto",
+    "title": "Afonso X e a produção trovadoresca",
+    "sub": "Castela e Leão na segunda metade do século XIII",
+    "textTitle": "Uma corte de produção cultural",
+    "paragraphs": [
+      "Na corte afonsina, composições sagradas coexistiam com cantigas de amor, de amigo, de escárnio e de maldizer.",
+      "As Cantigas de Santa Maria articulam poesia, música e imagens em torno de narrativas de devoção à Virgem."
+    ],
+    "img": "afonso-x.jpg",
+    "alt": "Representação medieval de Afonso X entronizado",
+    "caption": "Retrato de Afonso X, século XIII. Reprodução do verbete Afonso X de Castela, Wikipédia.",
+    "sourceUrl": "https://pt.wikipedia.org/wiki/Afonso_X_de_Castela",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "track": "Fé",
+    "label": "Fé e poder",
+    "title": "Devoção e legitimação régia",
+    "sub": "Uma interpretação das relações entre a monarquia e as Cantigas",
+    "cards": [
+      [
+        "Rei devoto",
+        "Afonso X apresenta-se como servidor e devoto de Santa Maria."
+      ],
+      [
+        "Autoridade",
+        "A associação entre o rei e a proteção divina pode reforçar a legitimidade monárquica."
+      ],
+      [
+        "Valores",
+        "As narrativas de milagre difundem modelos de fidelidade e conduta cristã."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Política e direito",
+    "title": "Poder régio e aristocracia",
+    "sub": "Disputas e projetos de ordenação no reinado afonsino",
+    "cards": [
+      [
+        "Território",
+        "A expansão militar cristã e as relações com os poderes muçulmanos marcaram a Península Ibérica."
+      ],
+      [
+        "Direito",
+        "A produção jurídica participou dos projetos de afirmação da autoridade do rei."
+      ],
+      [
+        "Tensões",
+        "Relações com setores da nobreza envolveram conflitos, negociações e resistências."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Historiografia",
+    "title": "A cavalaria em debate",
+    "sub": "Três interpretações sobre poder, religião e práticas guerreiras",
+    "cards": [
+      [
+        "Georges Duby",
+        "Destaca transformações sociais e a atuação de movimentos como a Paz de Deus e a Trégua de Deus na disciplina dos guerreiros."
+      ],
+      [
+        "Jean Flori",
+        "Enfatiza o processo de cristianização da ideologia guerreira e os sentidos religiosos atribuídos às armas e à investidura."
+      ],
+      [
+        "Dominique Barthélemy",
+        "Questiona rupturas abruptas e destaca continuidades, negociações entre poderes e normas da própria aristocracia."
+      ]
+    ],
+    "source": "Discussão historiográfica em Carvalho (2016). Edição brasileira de Barthélemy: 2010.",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Normas e práticas",
+    "title": "Ideais cristãos para a cavalaria",
+    "sub": "Prescrições religiosas e relações de poder",
+    "cards": [
+      [
+        "Limites",
+        "Paz e Trégua de Deus procuraram limitar certas violências e proteger pessoas, lugares e períodos."
+      ],
+      [
+        "Legitimação",
+        "A defesa da Igreja e da fé podia conferir valor religioso a determinadas práticas guerreiras."
+      ],
+      [
+        "Investigação",
+        "A existência de normas não garante seu cumprimento. É preciso comparar prescrições, contextos e ações."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Ramon Llull",
+    "title": "Virtudes e deveres do cavaleiro",
+    "sub": "O Livro da Ordem de Cavalaria como texto normativo",
+    "cards": [
+      [
+        "Virtudes",
+        "Lealdade, generosidade, temperança, caridade e humildade integram o ideal proposto."
+      ],
+      [
+        "Devoção",
+        "Missas, sermões, oração e reflexão moral aparecem como deveres do cavaleiro."
+      ],
+      [
+        "Formação",
+        "A figura do velho cavaleiro ermitão associa experiência, vida contemplativa e transmissão de ensinamentos."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Devoção mariana",
+    "title": "Santa Maria como senhora e protetora",
+    "sub": "A linguagem da fidelidade nas narrativas de milagre",
+    "cards": [
+      [
+        "Senhora",
+        "A Virgem recebe atributos de rainha celeste e senhora a quem se presta serviço."
+      ],
+      [
+        "Fidelidade",
+        "A devoção mariana recorre a uma linguagem próxima dos vínculos de serviço e lealdade."
+      ],
+      [
+        "Proteção",
+        "Vitórias e livramentos são apresentados pelas narrativas como sinais do favor da Virgem aos devotos."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Narrativa",
+    "title": "Cantiga 63: o cavaleiro e as três missas",
+    "sub": "Um relato de milagre situado em San Esteban de Gormaz",
+    "cards": [
+      [
+        "Antes da batalha",
+        "Um cavaleiro devoto interrompe a marcha para assistir a três missas em honra de Santa Maria."
+      ],
+      [
+        "Honra em risco",
+        "O escudeiro teme que sua ausência provoque vergonha; o cavaleiro permanece em oração."
+      ],
+      [
+        "O milagre",
+        "Ao sair, recebe elogios pela batalha e encontra marcas de combate nas armas. A narrativa atribui sua proteção à Virgem."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Fonte visual",
+    "title": "Lendo a iluminura da Cantiga 63",
+    "sub": "Observe a sequência e compare-a com a narrativa",
+    "textTitle": "O que os quadros articulam?",
+    "paragraphs": [
+      "Identifique as cenas de devoção e combate e os personagens que reaparecem.",
+      "Como a sequência relaciona fidelidade religiosa, honra guerreira e intervenção da Virgem?"
+    ],
+    "img": "cantiga-63.jpg",
+    "alt": "Página iluminada da Cantiga 63, com cenas sequenciais de oração e combate",
+    "caption": "AFONSO X. Cantigas de Santa Maria: cantiga 63, século XIII. Códice Rico, MS T.I.1, El Escorial. Reprodução: Warfare; narrativa: Oxford CSM Database.",
+    "sourceUrl": "https://warfare.ueuo.com/Cantiga/Cantigas_de_Santa_Maria-063.htm",
+    "sourceLabel": "Consultar fonte"
+  },
+  {
+    "track": "Fé",
+    "label": "Atividade",
+    "title": "Fé, imagens e interpretação",
+    "sub": "Uma proposta de análise conjunta de texto e iluminura",
+    "cards": [
+      [
+        "Descrever",
+        "Identifique personagens, ações, gestos e a ordem das cenas."
+      ],
+      [
+        "Relacionar",
+        "Compare o que o texto conta com o que a imagem mostra ou destaca."
+      ],
+      [
+        "Problematizar",
+        "Que valores a narrativa promove? Como representa os grupos religiosos envolvidos?"
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Formação docente",
+    "title": "O ensino de História e as Cantigas",
+    "sub": "Minicurso virtual associado à pesquisa de Carolina Minardi de Carvalho",
+    "sources": [
+      [
+        "Grupo do minicurso no Facebook (pode exigir login)",
+        "https://www.facebook.com/groups/1796727420564676/"
+      ],
+      [
+        "Consultar a narrativa e os registros da Cantiga 63 · Universidade de Oxford",
+        "https://csm.mml.ox.ac.uk/index.php?p=poemdata_view&rec=63"
+      ],
+      [
+        "Consultar a reprodução da iluminura da Cantiga 63",
+        "https://warfare.ueuo.com/Cantiga/Cantigas_de_Santa_Maria-063.htm"
+      ]
+    ]
+  },
+  {
+    "track": "Fé",
+    "label": "Síntese",
+    "title": "Fé e poder na cultura cavaleiresca",
+    "sub": "Retomada da pergunta que orienta a trilha",
+    "banner": "Textos e imagens religiosos ajudam a investigar valores, autoridade e conflitos",
+    "cards": [
+      [
+        "Fonte",
+        "A narrativa de milagre constrói sentidos para a experiência guerreira."
+      ],
+      [
+        "Método",
+        "A leitura de imagens exige observar convenções, contexto e intenção."
+      ],
+      [
+        "Conexões",
+        "Fé se articula às relações de gênero, às práticas de cuidado e à legitimação da violência."
+      ]
+    ],
+    "source": "Carvalho (2016).",
+    "readingUrl": "https://bdtd.ibict.br/vufind/Record/UNIFAL_ad56729619d61c58118ac87ada73075e"
+  },
+  {
+    "track": "Fé",
+    "label": "Referências",
+    "title": "Fontes da trilha de fé",
+    "sub": "Referências bibliográficas · acesso à lista completa em ABNT",
+    "references": [
+      "carvalho",
+      "duby",
+      "flori",
+      "barthelemy",
+      "llull",
+      "meneses",
+      "oxford63",
+      "cantiga63",
+      "afonso",
+      "minicurso"
+    ]
+  }
 ];
-// Complementos do roteiro de Hugo e a trilha de Eric.
-const beforeTitle=(title,items)=>{const i=slides.findIndex(s=>s.title===title);slides.splice(i<0?slides.length:i,0,...items)};
-beforeTitle('Fé e proteção diante da peste',[
-{label:'Circulação',title:'A peste e as rotas de circulação',sub:'Século XIV: conexões comerciais e disseminação da doença',cards:[['Contexto','A expansão das trocas conectava cidades, portos e regiões do Mediterrâneo.'],['Crimeia','Caffa aparece em relatos sobre a chegada da peste ao Mediterrâneo, embora as rotas de disseminação sejam complexas.'],['Impacto','As estimativas de mortalidade variam. Silva e Silva (2023) apresentam a faixa de um quarto a um terço da população europeia, com impactos regionais desiguais.']]},
-{label:'Experiências',title:'Diante da morte e da incerteza',sub:'As fontes descrevem respostas diferentes à epidemia',cards:[['Penitência','Práticas de oração, devoção aos santos e autoflagelação aparecem em relatos da época.'],['Prazer e fuga','O Decameron de Boccaccio apresenta personagens que deixam Florença e narram histórias durante a peste.'],['Representações','A Dança Macabra, difundida em obras posteriores, evocou a morte através de imagens e textos.']]}
-]);
-beforeTitle('Comparar epidemias sem apagar diferenças',[
-{label:'Atividades',title:'Da pesquisa à produção dos estudantes',sub:'Propostas de investigação, criação e análise de fontes',cards:[['Mapear e entrevistar','Mapear rotas e entrevistar pessoas sobre impactos socioeconômicos da pandemia recente.'],['Criar','Produzir um infográfico coletivo ou expressar experiências em desenhos, poemas, crônicas ou vídeos.'],['Verificar','Construir um protocolo para checar notícias sobre saúde nas redes sociais.']]},
-{label:'Propostas didáticas',title:'Outras atividades para a turma',sub:'Diferentes formas de investigar epidemias em sala de aula',cards:[['Rotas e experiências','Mapear circuitos e comparar impactos de epidemias em contextos diferentes.'],['Comunidade e expressão','Entrevistar pessoas sobre a pandemia recente ou criar poemas, desenhos e relatos.'],['Checagem','Construir um roteiro para verificar notícias e imagens sobre saúde.']]}
-]);
-slides.push(
-{track:'Gênero',label:'Abertura',title:'Pelo pão de cada dia',sub:'Mulheres medievais, trabalho e ensino de História',hero:'Que trabalhos as mulheres exerceram na sociedade medieval?',note:'Europa medieval · principalmente séculos XIII a XVI'},
-{track:'Gênero',label:'Historiografia',title:'Para além da invisibilidade',sub:'As fontes mostram experiências diversas de trabalho',cards:[['Presença','Mulheres atuaram no comércio, nas oficinas, na saúde e em atividades intelectuais.'],['Espaços','O trabalho familiar, doméstico e urbano se cruzava de formas diferentes conforme lugar e condição social.'],['Ciclo de vida','Solteiras, casadas e viúvas podiam ter vínculos e possibilidades de trabalho distintos.']]},
-{track:'Gênero',label:'Trabalho urbano',title:'Ofícios, comércio e corporações',sub:'O crescimento das cidades ampliou a diversidade de ocupações',cards:[['Têxtil','Fiação, tecelagem, bordado de seda e fabricação de artigos.'],['Alimentos','Venda de peixe e hortaliças, produção de pão e outros ofícios de abastecimento.'],['Corporações','Em Basileia, a corporação de peleiros reconheceu direitos a homens e mulheres em 1226, segundo o artigo.']]},
-{track:'Gênero',label:'Desigualdade',title:'Trabalho e vulnerabilidade',sub:'A presença feminina nos ofícios não significava igualdade',cards:[['Oficinas','Algumas mulheres atuavam em negócios familiares ou dirigiam oficinas, inclusive após a viuvez.'],['Recursos','Muitas trabalhadoras do setor têxtil não possuíam os próprios instrumentos e dependiam de mestres.'],['Restrições','Em determinados contextos, concorrência e normas corporativas limitaram o acesso aos ofícios.']]},
-{track:'Gênero',label:'Saúde',title:'Mulheres, medicina e cuidado',sub:'Uma conexão entre as trilhas de gênero e saúde',cards:[['Ofícios','Parteiras, cuidadoras, boticárias e cirurgiãs exerceram práticas de saúde em contextos variados.'],['Formação','A institucionalização universitária e as regulações profissionais contribuíram para restringir sua atuação em certos lugares.'],['Registros','O artigo cita pelo menos 16 médicas documentadas em Frankfurt no século XV, muitas delas judias.']]},
-{track:'Gênero',label:'Fonte visual',title:'Mulheres nos canteiros de obras',sub:'Uma iluminura como ponto de partida para a investigação',textTitle:'O que a imagem mostra?',paragraphs:['Berte e sua criada aparecem trabalhando na construção de Vézelay, enquanto Girart observa a cena.','Que diferenças sociais e que funções podemos perceber?'],img:'berte.jpg',alt:'Iluminura de Berte e sua criada transportando materiais para a construção de Vézelay',caption:'Roman de Girart de Roussillon, Cod. 2549, fol. 167v, c. 1448. Biblioteca Nacional Austríaca, Viena.'},
-{track:'Gênero',label:'Análise de fonte',title:'A imagem também constrói uma narrativa',sub:'Representação, trabalho e condição social',cards:[['Narrativa','A cena integra uma história de caráter hagiográfico que exalta a santidade de Berte.'],['Evidência','Ela abre perguntas sobre o trabalho feminino, mas não deve ser tomada como retrato neutro de todas as trabalhadoras.'],['Outras fontes','Registros de construção apontam mulheres em tarefas como transporte de materiais e outras ocupações nos canteiros.']]},
-{track:'Gênero',label:'Legislação e violência',title:'Trabalho, suspeita e autoridade régia',sub:'Portugal: as Ordenações Afonsinas como fonte para a sala de aula',cards:[['O problema','Mulheres que prestavam serviços a clérigos podiam ser alvo de suspeitas e difamação.'],['A ordenação','O texto distingue serviços considerados honestos de relações que a lei punia e prevê proteção sob certas condições.'],['Questão histórica','O que a lei revela sobre trabalho, normas morais e poder das autoridades?']]},
-{track:'Gênero',label:'Atividade',title:'Lendo a imagem e a lei',sub:'Duas propostas a partir do artigo de Trevisan e Lima',cards:[['Observar','Na iluminura, identifique personagens, tarefas, roupas e elementos do canteiro.'],['Interpretar','Na lei, investigue quem acusa, quem trabalha e quais condições aparecem para a proteção.'],['Comparar','Como gênero e posição social influenciam os trabalhos e as representações?']]},
-{track:'Gênero',label:'Síntese',title:'Trabalho feminino e ensino de História',sub:'Retomada da pergunta inicial',banner:'As mulheres exerceram trabalhos diversos e enfrentaram condições desiguais',cards:[['Visibilidade','Examinar fontes ajuda a recuperar experiências frequentemente omitidas.'],['Contexto','Os papéis e as oportunidades variavam conforme lugar, tempo e condição social.'],['Presente','Comparar problemas de diferentes épocas exige atenção às suas diferenças históricas.']]},
-{track:'Gênero',label:'Referências',title:'Fontes da trilha de gênero',sub:'Artigo, documento e imagem',sources:[['TREVISAN, Mariana Bonat; LIMA, Douglas Mota Xavier de. Pelo pão de cada dia: mulheres medievais, trabalho e ensino de História. Ponta de Lança, v. 16, n. 30, p. 34–55, 2022.','https://ufs.emnuvens.com.br/pontadelanca/article/view/17531'],['Roman de Girart de Roussillon, Cod. 2549, fol. 167v · Biblioteca Nacional Austríaca','https://onb.digital/result/10FFC0F6'],['Ordenações Afonsinas, v. V, tít. CXXI · adaptação didática no artigo, p. 49–50','https://periodicos.ufs.br/pontadelanca/article/download/17531/12959/53560']]}
-);
-slides.push(
-{track:'Fé',label:'Abertura',title:'Fé no ensino de História',sub:'Cavalaria e devoção nas Cantigas de Santa Maria',hero:'Como a fé participa da construção de valores e relações de poder?',note:'Corte de Afonso X · Península Ibérica · século XIII'},
-{track:'Fé',label:'Ensino de História',title:'Pesquisa histórica e escola básica',sub:'A aproximação entre universidade e sala de aula',cards:[['Problema','Carvalho identifica um distanciamento entre a renovação das pesquisas e certas abordagens escolares da Idade Média.'],['Renovação','O estudo da Península Ibérica amplia os temas, os sujeitos e as fontes disponíveis para a aula.'],['Formação','Trabalhar com textos e imagens permite discutir a construção do conhecimento histórico.']]},
-{track:'Fé',label:'Livros didáticos',title:'Ampliando os recortes sobre o medievo',sub:'A Península Ibérica permite explorar outras experiências históricas',cards:[['Espaços','Leão e Castela ajudam a ampliar um ensino frequentemente concentrado em regiões francas e anglo-saxônicas.'],['Temas','Literatura, religiosidade e cultura visual complementam o estudo do feudalismo e das cruzadas.'],['Alteridade','Cristãos, muçulmanos e judeus viveram relações de convivência, conflito e desigualdade que exigem contextualização.']]},
-{track:'Fé',label:'Cultura visual',title:'Imagens como fontes históricas',sub:'Uma leitura que interroga produção, linguagem e intenção',cards:[['Produção','Quem produziu a imagem? Para quem? Em quais circunstâncias?'],['Linguagem','O que gestos, roupas, enquadramentos e legendas tornam visível?'],['Sequência','As iluminuras podem ser comparadas à linguagem dos quadrinhos, respeitando as diferenças de época e função.']]},
-{track:'Fé',label:'Contexto',title:'Afonso X e a produção trovadoresca',sub:'Castela e Leão na segunda metade do século XIII',textTitle:'Uma corte de produção cultural',paragraphs:['Na corte afonsina, composições sagradas coexistiam com cantigas de amor, de amigo, de escárnio e de maldizer.','As Cantigas de Santa Maria articulam poesia, música e imagens em torno de narrativas de devoção à Virgem.'],img:'afonso-x.jpg',alt:'Representação medieval de Afonso X entronizado',caption:'Afonso X de Castela. Reprodução de iluminura medieval; referência da imagem: verbete Afonso X de Castela, Wikipédia.'},
-{track:'Fé',label:'Fé e poder',title:'Devoção e legitimação régia',sub:'Uma interpretação das relações entre a monarquia e as Cantigas',cards:[['Rei devoto','Afonso X apresenta-se como servidor e devoto de Santa Maria.'],['Autoridade','A associação entre o rei e a proteção divina pode reforçar a legitimidade monárquica.'],['Valores','As narrativas de milagre difundem modelos de fidelidade e conduta cristã.']]},
-{track:'Fé',label:'Política e direito',title:'Poder régio e aristocracia',sub:'Disputas e projetos de ordenação no reinado afonsino',cards:[['Território','A expansão militar cristã e as relações com os poderes muçulmanos marcaram a Península Ibérica.'],['Direito','A produção jurídica participou dos projetos de afirmação da autoridade do rei.'],['Tensões','Relações com setores da nobreza envolveram conflitos, negociações e resistências.']]},
-{track:'Fé',label:'Historiografia',title:'A cavalaria em debate',sub:'Três interpretações sobre poder, religião e práticas guerreiras',cards:[['Georges Duby','Destaca transformações sociais e a atuação de movimentos como a Paz de Deus e a Trégua de Deus na disciplina dos guerreiros.'],['Jean Flori','Enfatiza o processo de cristianização da ideologia guerreira e os sentidos religiosos atribuídos às armas e à investidura.'],['Dominique Barthélemy','Questiona rupturas abruptas e destaca continuidades, negociações entre poderes e normas da própria aristocracia.']]},
-{track:'Fé',label:'Normas e práticas',title:'Ideais cristãos para a cavalaria',sub:'Prescrições religiosas e relações de poder',cards:[['Limites','Paz e Trégua de Deus procuraram limitar certas violências e proteger pessoas, lugares e períodos.'],['Legitimação','A defesa da Igreja e da fé podia conferir valor religioso a determinadas práticas guerreiras.'],['Investigação','A existência de normas não garante seu cumprimento. É preciso comparar prescrições, contextos e ações.']]},
-{track:'Fé',label:'Ramon Llull',title:'Virtudes e deveres do cavaleiro',sub:'O Livro da Ordem de Cavalaria como texto normativo',cards:[['Virtudes','Lealdade, generosidade, temperança, caridade e humildade integram o ideal proposto.'],['Devoção','Missas, sermões, oração e reflexão moral aparecem como deveres do cavaleiro.'],['Formação','A figura do velho cavaleiro ermitão associa experiência, vida contemplativa e transmissão de ensinamentos.']]},
-{track:'Fé',label:'Devoção mariana',title:'Santa Maria como senhora e protetora',sub:'A linguagem da fidelidade nas narrativas de milagre',cards:[['Senhora','A Virgem recebe atributos de rainha celeste e senhora a quem se presta serviço.'],['Fidelidade','A devoção mariana recorre a uma linguagem próxima dos vínculos de serviço e lealdade.'],['Proteção','Vitórias e livramentos são apresentados pelas narrativas como sinais do favor da Virgem aos devotos.']]},
-{track:'Fé',label:'Narrativa',title:'Cantiga 63: o cavaleiro e as três missas',sub:'Um relato de milagre situado em San Esteban de Gormaz',cards:[['Antes da batalha','Um cavaleiro devoto interrompe a marcha para assistir a três missas em honra de Santa Maria.'],['Honra em risco','O escudeiro teme que sua ausência provoque vergonha; o cavaleiro permanece em oração.'],['O milagre','Ao sair, recebe elogios pela batalha e encontra marcas de combate nas armas. A narrativa atribui sua proteção à Virgem.']]},
-{track:'Fé',label:'Fonte visual',title:'Lendo a iluminura da Cantiga 63',sub:'Observe a sequência e compare-a com a narrativa',textTitle:'O que os quadros articulam?',paragraphs:['Identifique as cenas de devoção e combate e os personagens que reaparecem.','Como a sequência relaciona fidelidade religiosa, honra guerreira e intervenção da Virgem?'],img:'cantiga-63.jpg',alt:'Página iluminada da Cantiga 63, com cenas sequenciais de oração e combate',caption:'Cantigas de Santa Maria, Cantiga 63, Códice Rico, século XIII. Reprodução consultada em Warfare; narrativa e registro do manuscrito no Oxford Cantigas de Santa Maria Database.'},
-{track:'Fé',label:'Atividade',title:'Fé, imagens e interpretação',sub:'Uma proposta de análise conjunta de texto e iluminura',cards:[['Descrever','Identifique personagens, ações, gestos e a ordem das cenas.'],['Relacionar','Compare o que o texto conta com o que a imagem mostra ou destaca.'],['Problematizar','Que valores a narrativa promove? Como representa os grupos religiosos envolvidos?']]},
-{track:'Fé',label:'Formação docente',title:'O ensino de História e as Cantigas',sub:'Minicurso virtual associado à pesquisa de Carolina Minardi de Carvalho',sources:[['Acessar o grupo do minicurso no Facebook','https://www.facebook.com/groups/1796727420564676/'],['Consultar a narrativa e os registros da Cantiga 63 · Universidade de Oxford','https://csm.mml.ox.ac.uk/index.php?p=poemdata_view&rec=63'],['Consultar a reprodução da iluminura da Cantiga 63','https://warfare.ueuo.com/Cantiga/Cantigas_de_Santa_Maria-063.htm']]},
-{track:'Fé',label:'Síntese',title:'Fé e poder na cultura cavaleiresca',sub:'Retomada da pergunta que orienta a trilha',banner:'Textos e imagens religiosos ajudam a investigar valores, autoridade e conflitos',cards:[['Fonte','A narrativa de milagre constrói sentidos para a experiência guerreira.'],['Método','A leitura de imagens exige observar convenções, contexto e intenção.'],['Conexões','Fé se articula às relações de gênero, às práticas de cuidado e à legitimação da violência.']]},
-{track:'Fé',label:'Referências',title:'Fontes da trilha de fé',sub:'Pesquisa, narrativa e debates historiográficos',sources:[['CARVALHO, Carolina Minardi de. Da fé se valem os belicosos: uma perspectiva educacional sobre a cavalaria nas Cantigas de Santa Maria. Dissertação, Universidade Federal de Alfenas, 2016.','https://repositorio.unifal-mg.edu.br/browse/contributor?scope=49d9b851-7e3f-4010-8f54-ebed2cec6f20&value=Miatello%2C+Andr%C3%A9+Luis+Pereira'],['DUBY, Georges. A sociedade cavaleiresca. 1989. · FLORI, Jean. A cavalaria. 2005. · BARTHÉLEMY, Dominique. A cavalaria. 2012.',''],['LLULL, Ramon. Livro da Ordem de Cavalaria. · MENESES, Ulpiano T. Bezerra de. Fontes visuais, cultura visual, História visual.',''],['Oxford Cantigas de Santa Maria Database · Cantiga 63','https://csm.mml.ox.ac.uk/index.php?p=poemdata_view&rec=63']]}
-);
 
 const added=window.presentationSections;
 slides.unshift(...added.intro);slides.push(...added.violence,...added.outro);
@@ -66,16 +832,17 @@ function interactiveMarkup(s){
  if(s.steps&&s.oneStep){const n=stepState[current]||0,c=s.steps[n];return `<div class="step-stage single-step"><div class="step-status">Eixo ${n+1} de ${s.steps.length}<span>Espaço para revelar</span></div><div class="sequence-rail">${s.steps.map((x,i)=>`<span class="ms-badge ${i===n?'ms-badge--danger':''}" ${i===n?'aria-current="step"':''}>${i+1} · ${x[0]}</span>`).join('')}</div><article class="card step-card"><h3>${c[0]}</h3><p>${c[1]}</p></article></div>`}
  if(s.steps){const n=stepState[current]||0;return `<div class="step-stage"><div class="step-status">Etapa ${n+1} de ${s.steps.length}<span>Espaço para revelar</span></div><div class="grid three">${s.steps.map((c,i)=>`<article class="card step-card ${i>n?'pending':''}" aria-hidden="${i>n}"><span class="eyebrow">${c[0]}</span><p>${c[1]}</p></article>`).join('')}</div></div>`}
  if(s.poll){const selected=pollState[current];return `<div class="question-stage"><div class="grid three">${s.poll.map((c,i)=>`<button class="choice ${selected===i?'selected':''}" data-choice="${i}" aria-pressed="${selected===i}"><span class="eyebrow">Hipótese ${i+1}</span><span>${c[0]}</span></button>`).join('')}</div><div class="reason" aria-live="polite">${selected===undefined?'Escolha uma hipótese para examinar seus argumentos.':s.poll[selected][1]}</div></div>`}
- if(s.lab){const n=labState[current]||0,f=s.lab[n],b=f.box;return `<div class="split source-lab"><div class="text-card"><div class="focus-tabs" role="group" aria-label="Detalhes da fonte">${s.lab.map((x,i)=>`<button data-scene="${i}" aria-pressed="${n===i}">${x.name}</button>`).join('')}</div><div id="labText" aria-live="polite"><h3>${f.heading}</h3><p>${f.text}</p></div></div><figure class="image-card" style="margin:0"><button class="image-button lab-image" id="openZoom" aria-label="Ampliar imagem"><span class="manuscript" style="aspect-ratio:${s.labAspect||'558 / 856'}"><img src="assets/${s.img}" alt="${s.alt}"><span class="source-mark" style="left:${b[0]}%;top:${b[1]}%;width:${b[2]}%;height:${b[3]}%" aria-hidden="true"></span></span><span class="image-overlay">Ampliar imagem ↑</span></button><figcaption class="caption">${s.caption}${s.sourceUrl?` <a href="${s.sourceUrl}" target="_blank" rel="noopener noreferrer">Consultar reportagem</a>`:''}</figcaption></figure></div>`}
+ if(s.lab){const n=labState[current]||0,f=s.lab[n],b=f.box;return `<div class="split source-lab"><div class="text-card"><div class="focus-tabs" role="group" aria-label="Detalhes da fonte">${s.lab.map((x,i)=>`<button data-scene="${i}" aria-pressed="${n===i}">${x.name}</button>`).join('')}</div><div id="labText" aria-live="polite"><h3>${f.heading}</h3><p>${f.text}</p>${f.link?`<a class="context-source" href="${f.link}" target="_blank" rel="noopener noreferrer">${f.linkLabel||"Consultar fonte"}</a>`:""}</div></div><figure class="image-card" style="margin:0"><button class="image-button lab-image" id="openZoom" aria-label="Ampliar imagem"><span class="manuscript" style="aspect-ratio:${s.labAspect||'558 / 856'}"><img src="assets/${s.img}" alt="${s.alt}"><span class="source-mark" style="left:${b[0]}%;top:${b[1]}%;width:${b[2]}%;height:${b[3]}%" aria-hidden="true"></span></span><span class="image-overlay">Ampliar imagem ↑</span></button><figcaption class="caption">${s.caption}${s.sourceUrl?` <a href="${s.sourceUrl}" target="_blank" rel="noopener noreferrer">Consultar reportagem</a>`:''}</figcaption></figure></div>`}
  return '';
 }
 function render(){
  const s=slides[current],track=s.track||'Saúde',owner=trackOwners[track],group=['Introdução','Conclusão'].includes(track);
  let inner=`<div class="slide-head"><span class="eyebrow">${group?'TRABALHO':`TRILHA ${track.toUpperCase()}`} / ${s.block?`BLOCO ${s.block} / `:''}${s.label}</span><h1 class="${s.title.length>60?'long-title':''}">${s.title}</h1><div class="subtitle-row"><p class="subtitle">${s.sub||''}</p>${s.label==='Abertura'&&owner?.name?`<span class="ms-badge owner-badge ms-badge--${owner.tone}" aria-label="Responsável pela trilha: ${owner.name}">${owner.name}</span>`:''}</div></div>`;
  if(s.hero)inner+=`<div class="hero"><p>${s.hero}</p></div>${s.note?`<p class="hero-note">${s.note}</p>`:''}`;
- if(s.img&&!s.lab)inner+=`<div class="split"><div class="text-card"><h3>${s.textTitle}</h3>${s.paragraphs.map(p=>`<p>${p}</p>`).join('')}</div><figure class="image-card" style="margin:0"><button class="image-button" id="openZoom" aria-label="Ampliar imagem: ${s.alt}"><img src="assets/${s.img}" alt="${s.alt}"><span class="image-overlay">Ampliar imagem ↑</span></button><figcaption class="caption">${s.caption}</figcaption></figure></div>`;
+ if(s.img&&!s.lab)inner+=`<div class="split"><div class="text-card"><h3>${s.textTitle}</h3>${s.paragraphs.map(p=>`<p>${p}</p>`).join('')}</div><figure class="image-card" style="margin:0"><button class="image-button" id="openZoom" aria-label="Ampliar imagem: ${s.alt}"><img src="assets/${s.img}" alt="${s.alt}"><span class="image-overlay">Ampliar imagem ↑</span></button><figcaption class="caption">${s.caption}${s.sourceUrl?` <a href="${s.sourceUrl}" target="_blank" rel="noopener noreferrer">${s.sourceLabel||"Consultar fonte"}</a>`:""}</figcaption></figure></div>`;
  if(s.cards){if(s.banner)inner+=`<div class="dark-banner">${s.banner}</div>`;inner+=`<div class="grid ${s.cards.length===4?'four':'three'} ${s.banner?'compact':''}">${s.cards.map(c=>`<article class="card ${c[2]?'video-card':''}"><span class="eyebrow">${c[0]}</span>${c[2]?`<a class="video-link" href="${c[2]}" target="_blank" rel="noopener noreferrer">${c[1]}<span class="video-action">Assistir no YouTube <span aria-hidden="true">↗</span></span></a>`:`<p>${c[1]}</p>`}</article>`).join('')}</div>`}
  inner+=interactiveMarkup(s);
+ if(s.references)inner+=`<div class="reference-list" tabindex="0" aria-label="Referências da trilha">${s.references.map(id=>{const r=window.referenceCatalog.find(x=>x.id===id);return r?`<p>${r.body} <a href="${r.url||'referencias.html#'+r.id}" target="_blank" rel="noopener noreferrer">${r.url?'Consultar documento':'Ver referência'}</a></p>`:''}).join('')}</div><p class="reference-more"><a href="referencias.html#${s.references[0]}" target="_blank" rel="noopener noreferrer">Referências completas em ABNT, endereços e notas das fontes</a></p>`;
  if(s.sources)inner+=`<div class="sources">${s.sources.map(x=>x[1]?`<a href="${x[1]}" target="_blank" rel="noopener noreferrer">${x[0]} ↗</a>`:`<span>${x[0]}</span>`).join('')}</div>`;
  if(s.source)inner+=`<p class="source">${s.readingUrl?`<a href="${s.readingUrl}" target="_blank" rel="noopener noreferrer">${s.source}</a>`:s.source}</p>`;
  stage.innerHTML=`<article class="slide ${direction<0?'backwards':'forwards'} ${track==='Violência'?'violence-slide':''}">${inner}</article>`;
@@ -85,7 +852,7 @@ function render(){
  updateHint();history.replaceState(null,'','#'+(current+1));
  if(s.img)$('openZoom').addEventListener('click',openZoom);
  stage.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>{pollState[current]=Number(b.dataset.choice);stage.querySelectorAll('[data-choice]').forEach(x=>{const selected=x===b;x.classList.toggle('selected',selected);x.setAttribute('aria-pressed',selected)});const reason=stage.querySelector('.reason');reason.textContent=s.poll[pollState[current]][1];settle(reason)}));
- stage.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>{const n=Number(b.dataset.scene);labState[current]=n;const focus=s.lab[n];stage.querySelectorAll('[data-scene]').forEach(x=>x.setAttribute('aria-pressed',x===b));const mark=stage.querySelector('.source-mark');Object.assign(mark.style,{left:focus.box[0]+'%',top:focus.box[1]+'%',width:focus.box[2]+'%',height:focus.box[3]+'%'});$('labText').innerHTML=`<h3>${focus.heading}</h3><p>${focus.text}</p>`;settle($('labText'))}));
+ stage.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>{const n=Number(b.dataset.scene);labState[current]=n;const focus=s.lab[n];stage.querySelectorAll('[data-scene]').forEach(x=>x.setAttribute('aria-pressed',x===b));const mark=stage.querySelector('.source-mark');Object.assign(mark.style,{left:focus.box[0]+'%',top:focus.box[1]+'%',width:focus.box[2]+'%',height:focus.box[3]+'%'});$('labText').innerHTML=`<h3>${focus.heading}</h3><p>${focus.text}</p>${focus.link?`<a class="context-source" href="${focus.link}" target="_blank" rel="noopener noreferrer">${focus.linkLabel||"Consultar fonte"}</a>`:""}`;settle($('labText'))}));
 }
 function settle(el){if(!reduced())el.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:300,easing:'cubic-bezier(0.34, 1.56, 0.64, 1)'})}
 function updateHint(){const s=slides[current];$('hint').textContent=s.steps?((stepState[current]||0)<s.steps.length-1?'Espaço ou → para revelar':'→ para continuar'):s.lab?'Selecione um detalhe · ↑ amplia':s.img?'↑ para ampliar a imagem':s.poll?'Selecione uma hipótese':'Use as setas para navegar';$('next').setAttribute('aria-label',s.steps&&(stepState[current]||0)<s.steps.length-1?'Revelar próxima etapa':'Próximo slide')}
@@ -94,9 +861,9 @@ function advance(){if(!reveal(1))go(current+1)}function previous(){if(!reveal(-1
 function go(n){const target=Math.min(slides.length-1,Math.max(0,n));if(target===current)return;direction=target>current?1:-1;clearTimeout(slideTimer);const old=stage.querySelector('.slide');old.classList.remove('backwards','forwards');old.classList.add(direction<0?'backwards':'forwards','exiting');slideTimer=setTimeout(()=>{current=target;render()},reduced()?10:150)}
 function imageContentRect(img){const r=img.getBoundingClientRect();const scale=Math.min(r.width/img.naturalWidth,r.height/img.naturalHeight);const width=img.naturalWidth*scale,height=img.naturalHeight*scale;return {left:r.left+(r.width-width)/2,top:r.top+(r.height-height)/2,width,height};}
 function flip(from,to){return `translate(${from.left-to.left}px, ${from.top-to.top}px) scale(${from.width/to.width}, ${from.height/to.height})`;}
-async function openZoom(){const s=slides[current],source=$('openZoom')?.querySelector('img');if(!s.img||!source||zoomBusy||zoom.open)return;zoomBusy=true;lastFocus=document.activeElement;const z=$('zoomImg');$('zoomTitle').textContent=s.title;z.src='assets/'+s.img;z.alt=s.alt;$('zoomCaption').textContent=s.caption;const start=imageContentRect(source);zoom.showModal();$('closeZoom').focus();try{await z.decode()}catch{};await new Promise(requestAnimationFrame);const end=z.getBoundingClientRect();if(!reduced()&&end.width&&end.height){const animation=z.animate([{transform:flip(start,end),opacity:1},{transform:'translate(0,0) scale(1,1)',opacity:1}],{duration:450,easing:'cubic-bezier(0.34, 1, 0.64, 1)',fill:'both'});try{await animation.finished}catch{}animation.cancel()}zoomBusy=false;}
+async function openZoom(){const s=slides[current],source=$('openZoom')?.querySelector('img');if(!s.img||!source||zoomBusy||zoom.open)return;zoomBusy=true;zoom.dataset.transitioning='true';window.imageViewer?.reset();lastFocus=document.activeElement;const z=$('zoomImg');$('zoomTitle').textContent=s.title;z.src='assets/'+s.img;z.alt=s.alt;$('zoomCaption').textContent=s.caption;const start=imageContentRect(source);zoom.showModal();$('closeZoom').focus();try{await z.decode()}catch{};await new Promise(requestAnimationFrame);const end=z.getBoundingClientRect();if(!reduced()&&end.width&&end.height){const animation=z.animate([{transform:flip(start,end),opacity:1},{transform:'translate(0,0) scale(1,1)',opacity:1}],{duration:450,easing:'cubic-bezier(0.34, 1, 0.64, 1)',fill:'both'});try{await animation.finished}catch{}animation.cancel()}zoomBusy=false;zoom.dataset.transitioning='false';}
 function closeDialog(dialog,after){if(dialog.classList.contains('closing'))return;dialog.classList.add('closing');setTimeout(()=>{dialog.close();dialog.classList.remove('closing');after?.()},reduced()?10:150)}
-async function closeZoom(){if(!zoom.open||zoomBusy)return;zoomBusy=true;const source=$('openZoom')?.querySelector('img'),z=$('zoomImg');zoom.classList.add('closing');if(!reduced()&&source?.isConnected&&source.naturalWidth){const start=z.getBoundingClientRect(),end=imageContentRect(source);const animation=z.animate([{transform:'translate(0,0) scale(1,1)'},{transform:flip(end,start)}],{duration:450,easing:'cubic-bezier(0.34, 1, 0.64, 1)',fill:'both'});try{await animation.finished}catch{}animation.cancel()}zoom.close();zoom.classList.remove('closing');lastFocus?.focus();zoomBusy=false}
+async function closeZoom(){if(!zoom.open||zoomBusy)return;zoomBusy=true;zoom.dataset.transitioning='true';const source=$('openZoom')?.querySelector('img'),z=$('zoomImg');zoom.classList.add('closing');if(!reduced()&&source?.isConnected&&source.naturalWidth){const start=window.imageViewer?.baseRect()||z.getBoundingClientRect(),end=imageContentRect(source);const animation=z.animate([{transform:window.imageViewer?.transform()||'translate(0,0) scale(1,1)'},{transform:flip(end,start)}],{duration:450,easing:'cubic-bezier(0.34, 1, 0.64, 1)',fill:'both'});try{await animation.finished}catch{}animation.cancel()}zoom.close();zoom.classList.remove('closing');lastFocus?.focus();zoomBusy=false;zoom.dataset.transitioning='false'}
 zoom.addEventListener('cancel',e=>{e.preventDefault();closeZoom()});$('prev').onclick=previous;$('next').onclick=advance;$('closeZoom').onclick=closeZoom;
 zoom.addEventListener('click',e=>{if(e.target===zoom)closeZoom()});
 $('indexButton').onclick=()=>{let lastTrack='';$('indexList').innerHTML=slides.map((s,i)=>{const track=s.track||'Saúde',head=track!==lastTrack?`<h3 class="index-group">${track}</h3>`:'';lastTrack=track;return `${head}<button data-i="${i}" aria-current="${i===current}"><span>${pad(i+1)}</span>${s.title}</button>`}).join('');idx.showModal()};

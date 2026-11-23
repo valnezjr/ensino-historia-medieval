@@ -18,11 +18,13 @@ Abra o endereço acima e use **Apresentar** ou a tecla **F** para tela cheia. O 
 - Setas direita e esquerda: avançar e voltar.
 - Nos slides com etapas, Espaço ou seta direita revela a próxima etapa.
 - Seta para cima: ampliar a imagem; Escape ou seta para baixo retorna.
+- Dentro da imagem ampliada: pinça ou duplo toque no celular; roda do mouse, botões +/− ou teclas +/−; arraste para explorar. Ajustar ou tecla 0 restaura o enquadramento.
+- Referências: lista completa das fontes em ABNT, com endereços e notas de consulta.
 - Índice: escolher uma trilha ou slide.
 - Os números no endereço, como `#53`, abrem um slide diretamente.
 - Imagens e fontes tipográficas estão incluídas. Links de vídeos, reportagens e PDFs exigem conexão.
 
-O arquivo [roteiro-valnez.txt](roteiro-valnez.txt) contém a fala autoral de Valnez, distribuída em cinco blocos para 25–30 minutos, além das orientações da introdução e da conclusão do grupo. A trilha ocupa os slides 48–63, e a conclusão coletiva, 64–66.
+O arquivo [roteiro-valnez.txt](roteiro-valnez.txt) contém a fala autoral de Valnez, distribuída em cinco blocos para 25–30 minutos, além das orientações da introdução e da conclusão do grupo. A trilha ocupa os slides 47–62, e a conclusão coletiva, 63–65.
 
 ## Base da trilha de violência
 
@@ -32,7 +34,7 @@ Os slides distinguem as sínteses do capítulo, os documentos contemporâneos e 
 
 ## Créditos
 
-As referências acadêmicas e os créditos das imagens aparecem nas trilhas e legendas. A fotografia de Teresina é de Hélio Alef/GP1; o registro de Paulo Kogos foi publicado por Flávio Costa no Twitter e reproduzido pelo Diário do Centro do Mundo. O uso das imagens não implica licença livre sobre obras de terceiros.
+As 32 referências acadêmicas, documentais e visuais estão em [Referências e fontes](referencias.html), segundo a ABNT NBR 6023:2025, além das trilhas e legendas. Os links foram conferidos em 23 de novembro de 2026. O acervo ONB pode demorar a responder; incluímos o artigo com a reprodução. Facebook e o repositório da UNIFAL podem exigir login ou verificação automática. A BDTD oferece o registro específico da dissertação. A fotografia de Teresina é de Hélio Alef/GP1; o registro de Paulo Kogos foi publicado por Flávio Costa no Twitter e reproduzido pelo Diário do Centro do Mundo. O uso das imagens não implica licença livre sobre obras de terceiros.
 
 Identidade visual baseada no Mothership DS Flat. Fonte tipográfica: Outfit.
 

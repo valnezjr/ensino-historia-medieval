@@ -1,4 +1,3 @@
-/* Abertura, violência e síntese coletiva. */
 window.presentationSections={
   "intro": [
     {
@@ -338,13 +337,15 @@ window.presentationSections={
         {
           "name": "Mensagem",
           "heading": "Quem se apresenta como defensor?",
-          "text": "Em entrevista ao TAB (2020), Kogos associa os templários à defesa da fé e dos vulneráveis. Como essa autodescrição reivindica uma posição moral?",
+          "text": "Em entrevista ao TAB (2020), Kogos associa os templários à defesa da fé e dos vulneráveis. Como essa autodescrição reivindica uma posição moral? A entrevista completa está nas referências (Sampaio, 2020).",
           "box": [
             36,
             24,
             36,
             75
-          ]
+          ],
+          "link": "https://tab.uol.com.br/noticias/redacao/2020/11/05/nunca-namorei-na-vida-diz-paulo-kogos-influencer-com-116-mil-seguidores.htm",
+          "linkLabel": "Consultar entrevista (Sampaio, 2020)"
         }
       ],
       "block": 4
@@ -445,24 +446,13 @@ window.presentationSections={
       "block": 5,
       "label": "Referências / base e documentos",
       "title": "Fontes da trilha de violência",
-      "sub": "Eixo historiográfico e registros dos casos brasileiros",
-      "sources": [
-        [
-          "LANZIERI JÚNIOR, Carlile. Cavaleiros de papel. In: VIANNA, Luciano José (org.). A História Medieval entre a formação de professores e o ensino na Educação Básica. Autografia, 2021, p. 107–124.",
-          "https://historiapublica.sites.ufsc.br/wp-content/uploads/2021/08/ebook-ahistoriamedievalentreaformacao-180821.pdf#page=107"
-        ],
-        [
-          "DIAS; WELLINGTON; RICARDO. Grupo entra em confronto com mulheres durante manifestação em Teresina. GP1, 21 dez. 2019. Foto: Hélio Alef.",
-          "https://www.gp1.com.br/pi/piaui/noticia/2019/12/21/grupo-entra-em-confronto-com-mulheres-durante-manifestacao-em-teresina-468621.html"
-        ],
-        [
-          "MILLER, Fernando. “Cavaleiro templário” Paulo Kogos comparece na manifestação bolsonarista. DCM, 1 maio 2021. Vídeo: Flávio Costa/Twitter.",
-          "https://www.diariodocentrodomundo.com.br/essencial/cavaleiro-templario-paulo-kogos-comparece-na-manifestacao-bolsonarista/"
-        ],
-        [
-          "SAMPAIO, Paulo. Entrevista com Paulo Kogos. TAB/UOL, 5 nov. 2020.",
-          "https://tab.uol.com.br/noticias/redacao/2020/11/05/nunca-namorei-na-vida-diz-paulo-kogos-influencer-com-116-mil-seguidores.htm"
-        ]
+      "sub": "Referências bibliográficas · acesso à lista completa em ABNT",
+      "references": [
+        "lanzieri",
+        "gp1",
+        "alef",
+        "miller",
+        "sampaio"
       ]
     },
     {
@@ -470,24 +460,12 @@ window.presentationSections={
       "block": 5,
       "label": "Referências / atualização",
       "title": "Fontes complementares da análise digital",
-      "sub": "Crítica acadêmica, documentos audiovisuais e identificação institucional",
-      "sources": [
-        [
-          "SILVA, Matheus de Moura e. Revisionismo e negacionismo histórico em tempos de YouTube. Lampiar, v. 3, n. 1, 2024, p. 355–369.",
-          "https://periodicos.apps.uern.br/index.php/LAMP/article/download/5888/4167/18316"
-        ],
-        [
-          "BRASÃO DE ARMAS. A arte na Idade Média: o brasão de armas e a heráldica. YouTube, 10 abr. 2022.",
-          "https://www.youtube.com/watch?v=G0kPE865Y00"
-        ],
-        [
-          "IMPÉRIOS AD. O tráfico de escravos e a origem da escravidão no Brasil. YouTube, 12 mar. 2020.",
-          "https://www.youtube.com/watch?v=4dL_aBQeWHs"
-        ],
-        [
-          "FAETERJ Petrópolis. Professor Thiago Braga recebe Prêmio iBest. Registro institucional de atuação docente.",
-          "https://www.faeterj-petropolis.edu.br/post/professor-da-faeterj-petr%C3%B3polis-thiago-braga-recebe-pr%C3%AAmio-ibest"
-        ]
+      "sub": "Referências bibliográficas · acesso à lista completa em ABNT",
+      "references": [
+        "silva2024",
+        "brasao",
+        "imperios",
+        "faeterj"
       ]
     }
   ],
