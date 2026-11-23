@@ -56,19 +56,19 @@ window.presentationSections={
       "track": "Introdução",
       "label": "Método",
       "title": "Uma fonte, várias perguntas",
-      "sub": "Observe, contextualize, interprete e compare",
+      "sub": "Observar, contextualizar, interpretar e comparar",
       "steps": [
         [
           "Observar",
-          "Descreva elementos, personagens e ações antes de explicar a fonte."
+          "Descrever elementos, personagens e ações antes de explicar a fonte."
         ],
         [
           "Contextualizar",
-          "Investigue autoria, data, lugar, público e finalidade."
+          "Investigar autoria, data, lugar, público e finalidade."
         ],
         [
           "Interpretar",
-          "Relacione a evidência a uma hipótese e explicite o que ela não permite concluir."
+          "Relacionar a evidência a uma hipótese e explicitar o que ela não permite concluir."
         ]
       ],
       "source": "Proposta didática de análise das fontes utilizadas nas quatro trilhas."
