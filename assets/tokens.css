@@ -1,0 +1,905 @@
+/* ============================================================
+   MOTHERSHIP DS — Design Tokens
+   Extraído de "Agrupador de links e contatos" (valnezjr)
+   Dois eixos no <html>: data-ms-theme (glass | cream | paperpen |
+   flat) e data-ms-mode (base | dark). Sem atributo nenhum vale Glass
+   base, o :root.
+   ============================================================ */
+
+:root {
+  /* ---------- Tipografia ---------- */
+  --font-family: "Outfit", sans-serif;
+  /* Mono para código e dados alinhados. Maple Mono: "a" de um andar e
+     formas arredondadas como a Outfit, com ligaduras. Não vem carregada:
+     quem usa importa a fonte (ex.: @fontsource/maple-mono). */
+  --font-mono: "Maple Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  /* Fonte de títulos e display (h1–h3, Hero, StatTile, título de Card,
+     Modal…). Aqui é a do corpo; existe para um tema trocar só os títulos. */
+  --font-family-display: var(--font-family);
+  /* Estilo do mono. O itálico do Maple Mono é cursivo, e um tema pode
+     querer esse traço no código. */
+  --font-mono-style: normal;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  /* Só números grandes (StatTile) e título de herói, junto com --text-display. */
+  --font-weight-display: 600;
+
+  --text-xs: 12px;
+  --text-sm: 14px;   /* rodapé */
+  --text-md: 16px;   /* corpo */
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-display: 48px;
+
+  --line-height-tight: 24px; /* handle do perfil */
+  --line-height-base: 1.5;
+  --line-height-prose: 1.6; /* texto corrido longo (Prose) */
+
+  /* ---------- Espaçamento (escala observada na página) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 56px;  /* margem superior do container */
+
+  /* ---------- Raios ---------- */
+  --radius-md: 10px;     /* botões, cards, container */
+  --radius-pill: 50px;   /* trilho do switch, badges */
+  --radius-full: 50%;    /* avatar, botões de ícone */
+
+  /* ---------- Efeitos ---------- */
+  --blur-glass: 20px;    /* glassmorphism dos botões/cards */
+  --blur-soft: 4px;      /* trilho do switch */
+
+  /* ---------- Sombras (elevação) ----------
+     Escala do mais rente ao mais alto. Valores exatos de antes da
+     promoção a token (estavam soltos em components.css), sem mudança
+     visual. Preto fixo nos dois temas: sombra escurece o que está
+     embaixo, não segue a cor do texto. */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.3);       /* polegar do Toggle */
+  --shadow-sm: 0 8px 32px rgba(0, 0, 0, 0.25);     /* flutuantes pequenos: toast, botão da Sidebar */
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.25);    /* sobreposições: Listbox, Popover, DropdownMenu */
+  --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.35);    /* card pressionado (Gallery) */
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.45);    /* Modal */
+  /* Brilho de destaque (PricingCard/TestimonialCard em evidência):
+     sombra na cor de marca em vez de preto. */
+  --shadow-glow-accent: 0 12px 40px color-mix(in srgb, var(--color-accent) 22%, transparent);
+  /* Mesma ideia como filter (fatia de pizza em hover). */
+  --shadow-drop: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+
+  /* Camada por cima de todo preenchimento sólido (Button solid, página
+     ativa, ícone do Alert, Checkbox marcado, badge do PricingCard,
+     avatar sem foto): `background: var(--fill-solid), <cor>`. Não
+     depende da cor embaixo, então um token serve a todas. none aqui;
+     o Paperpen põe a hachura de caneta. */
+  --fill-solid: none;
+
+  /* ---------- Larguras de traço ---------- */
+  --border-width: 1px;   /* borda padrão de superfícies, campos e divisores */
+  --focus-width: 2px;    /* anel de foco (outline accent) */
+
+  /* ---------- Opacidades ---------- */
+  --opacity-disabled: 0.4;  /* controle desabilitado (Button, Input, Radio, Toggle, Tabs…) */
+  --opacity-dimmed: 0.55;   /* item fora de foco, ainda legível (legenda do Grafo3D filtrando) */
+
+  --transition-fast: 0.1s;   /* outline do switch */
+  --transition-base: 0.2s;   /* deslize do switch */
+  --transition-slow: 0.3s;   /* backgrounds e cores */
+  --transition-spatial: 0.45s; /* câmera, gaveta de foco — algo que ocupa espaço físico entrando em cena */
+
+  /* Easing com leve bounce (overshoot) — accordion e microinterações.
+     Não serve pra tudo que "entra": um painel ou uma câmera que
+     ultrapassa o alvo e volta lê como solavanco, não como charme —
+     overshoot funciona em algo pequeno e rápido (botão, badge), não em
+     algo grande e lento (gaveta, ponto de vista). */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Mesma família do --ease-bounce (mesmos x1/x2 — mesma cadência de
+     partida/chegada), y1 travado em 1 em vez de 1.56: tira o overshoot
+     sem trocar de família de curva. Pareia com --transition-spatial. */
+  --ease-spatial: cubic-bezier(0.34, 1, 0.64, 1);
+
+  /* O ease padrão do CSS, que as --transition-* já usavam implícito:
+     mudança de cor e fundo, sem overshoot e sem família de gesto.
+     Nomeado para quem traduz os tokens (o Mothership Shell) ler a curva
+     em vez de supor; escrever explícito onde a curva importa. */
+  --ease-default: ease;
+
+  /* ---------- Gestos de movimento ----------
+     Quatro gestos nomeados para o que entra, sai, confirma clique ou
+     roda em loop. Regra: assentar ao entrar, recolher ao sair. O que já
+     está em cena e só muda de forma usa o par spatial acima (D1 em
+     docs/decisoes.md). */
+  /* Assentar: chega, passa um pouco do ponto e assenta. Entrada de
+     modal, toast, popover, janela. */
+  --motion-assentar-ease: var(--ease-bounce);
+  --motion-assentar-duration: 0.3s;
+  /* Recolher: sai acelerando, sem overshoot — saída de qualquer coisa.
+     A curva é o --ease-spatial espelhado no tempo, mesma família. */
+  --motion-recolher-ease: cubic-bezier(0.36, 0, 0.66, 0);
+  --motion-recolher-duration: 0.15s;
+  /* Pulso: confirmação de clique, curto e com o mesmo overshoot. */
+  --motion-pulso-ease: var(--ease-bounce);
+  --motion-pulso-duration: 0.2s;
+  /* Deriva: contínuo e linear (fundo vivo, giro de borda). Sem token de
+     duração: o período depende de cada uso, e sob redução de movimento
+     a deriva para em vez de encurtar. */
+  --motion-deriva-ease: linear;
+
+  /* ---------- Larguras ---------- */
+  --container-max: 588px;
+  --avatar-size: 112px;
+  --switch-width: 64px;
+  --switch-height: 24px;
+  --switch-thumb: 32px;
+  /* Anel de hover do polegar — compartilhado por ThemeSwitch e Switch. */
+  --switch-hover-ring: 8px;
+
+  /* Indicador "bullet"/passo — a mesma linguagem visual em dois
+     componentes (bullets do Carousel, pontos do StepModal): tamanho
+     normal e tamanho "ativo" (o ponto atual se alonga em pill). */
+  --dot-size: 8px;
+  --dot-size-active: 24px;
+  /* Marcador pequeno de status/categoria — Legend (swatch) e histórico
+     de alertas (dot), tamanhos coincidentes por serem a mesma ideia
+     (um círculo/quadrado pequeno indicando uma cor/categoria). */
+  --indicator-size: 10px;
+
+  /* ---------- Texto/ícone sobre superfície sólida ----------
+     Cores fixas (não variam por tema): usadas sempre que texto ou
+     ícone precisa ficar sobre um fundo saturado o bastante pra exigir
+     contraste fixo, em vez de var(--color-text) normal.
+
+     --color-on-solid (branco) só funciona de verdade contra violet
+     (4.82:1) e contra fundos não-relacionados a cor de marca (avatar
+     placeholder, Carousel em modo foto — ver token block abaixo).
+     Medido (WCAG, texto normal, mínimo 4.5:1): accent 2.51, highlight
+     1.47, success 1.91, danger 3.21, pink 4.06, orange 2.96, gray
+     3.34 — todos falham com texto branco. --color-on-highlight já
+     resolvia isso pra highlight (único caso até agora); --color-on-accent
+     resolve accent (Button/Pagination) e serve de fallback padrão do
+     ícone do Alert (cobre também success/danger/orange/gray, que caem
+     no mesmo #1a1a2e — 8.95/5.31/5.77/5.10, todos ≥4.5:1 — sem
+     precisar de um token dedicado por tom, já que nenhuma regra
+     referencia esses nomes hoje). --color-on-danger serve o badge do
+     sino da Navbar (fundo danger fora do Alert). pink não ganhou
+     token novo: o tom -500 falha nos dois sentidos (4.06 branco /
+     4.20 escuro) — resolvido trocando o FUNDO do ícone pra pink-600
+     (5.39 com texto branco), não a cor do texto. */
+  --color-on-solid: #ffffff;      /* violet, avatar/carrossel — fundos onde branco já tem contraste real */
+  --color-on-highlight: #1a1a2e;  /* exceção: highlight (amarelo) é claro demais pro branco */
+  --color-on-accent: #1a1a2e;     /* exceção: accent (ciano) — 2.51:1 com branco, falha WCAG AA */
+  --color-on-danger: #1a1a2e;     /* exceção: danger (vermelho) — 3.21:1 com branco, falha WCAG AA */
+
+  /* ---------- Carousel: controles sobre foto ----------
+     Modo "foto" do Carousel precisa de branco fixo, independente do
+     tema — sobre uma imagem qualquer, var(--color-*) do tema não
+     garante contraste. Modo "conteúdo" ignora estes tokens e usa as
+     cores do tema normalmente (ver .ms-carousel--content). */
+  --carousel-overlay-border: rgba(255, 255, 255, 0.5);
+  --carousel-overlay-surface: rgba(255, 255, 255, 0.15);
+  --carousel-overlay-surface-hover: rgba(255, 255, 255, 0.4);
+  --carousel-overlay-dot: rgba(255, 255, 255, 0.45);
+  --carousel-overlay-scrim: rgba(0, 0, 0, 0.55);
+
+  /* ---------- Cores de marca (fixas nos dois temas) ----------
+     accent, pink e orange são as três cores exatas do gradiente de
+     assets/logo.svg (v1.5: accent e pink realinhados; orange já
+     nasceu daí). accent também é a cor da pupila da logo (#00aeed,
+     1 unidade de diferença — a mesma cor, arredondamento do CorelDraw). */
+  --color-accent: rgb(0, 175, 239);     /* ciano — gradiente da logo, parada 0% */
+  --color-highlight: rgb(255, 208, 0);  /* amarelo — ícone "flash" da página original */
+  --color-success: rgb(0, 214, 143);
+  --color-danger: rgb(255, 77, 109);
+
+  /* Ampliação da paleta: violeta é decorativa (não vem da logo),
+     rosa e laranja vêm do gradiente da logo, cinza é neutro de status. */
+  --color-violet: rgb(111, 97, 214);
+  --color-pink: rgb(237, 45, 102);
+  --color-orange: rgb(242, 111, 53);
+  --color-gray: rgb(139, 139, 158);
+
+  /* Gradiente da logo como sinal de "ativo/selecionado", e só isso:
+     indicador das Tabs, item atual de Navbar/Sidebar/Dock, ponto ativo
+     do StepIndicator, Card selected e Switch ligado. Nenhum outro uso:
+     se virar decoração, deixa de dizer "ativo". Estático, e o anel de
+     foco continua sólido (--color-accent-text). A cor nunca carrega o
+     estado sozinha; quem usa já tem aria-current/aria-selected/checked.
+     Mesma direção do assets/logo.svg: ciano à direita, rosa em 60%,
+     laranja à esquerda. Também no Checkbox/Radio marcados e, como
+     exceção ao anel de foco sólido, na borda dos campos de texto
+     focados (Input, Textarea, Select, Combobox). Paradas -500 no escuro e no Darker. Contraste
+     sobre o fundo e o vidro (mínimo 3:1): ciano 7.52/5.79, rosa
+     4.64/3.57, laranja 6.37/4.90. No Darker o vidro é o próprio fundo
+     a 60%, então dá 7.52/4.64/6.37 nos dois. O claro redefine. */
+  --gradient-active: linear-gradient(to left, var(--color-accent-500), var(--color-pink-500) 60%, var(--color-orange-500));
+  /* O mesmo sinal como TEXTO (opção selecionada do Select/Combobox e
+     item marcado do DropdownMenu), que pede 4.5:1. Também pinta o
+     HeroHighlight, única exceção decorativa (D4). Paradas -400 sobre o
+     vidro: 7.13/4.77/6.39 no escuro, 9.26/6.19/8.31 no Darker. */
+  --gradient-active-text: linear-gradient(to left, var(--color-accent-400), var(--color-pink-400) 60%, var(--color-orange-400));
+  /* O mesmo texto com o item em hover/ativo. No escuro o hover é branco a
+     50% e nenhuma parada passa ali (o -400 cai para 1.0–1.5:1), então
+     vira a cor do texto. Darker e claro repetem o gradiente. */
+  --gradient-active-text-hover: linear-gradient(var(--color-text), var(--color-text));
+  /* Fundo do item atual de Navbar/Sidebar/Dock (vidro branco + anel no
+     gradiente). No escuro é o próprio vidro; o claro redefine. */
+  --color-surface-selected: var(--color-surface);
+  --shadow-selected: none;
+  /* Borda em gradiente num elemento sem ::before (Input, Radio): use com
+     border transparente. O vidro fica no padding-box; o fundo da página
+     embaixo dele impede o gradiente de vazar pelo vidro translúcido. */
+  --gradient-field-ring:
+    linear-gradient(var(--color-field), var(--color-field)) padding-box,
+    linear-gradient(var(--bg-base), var(--bg-base)) padding-box,
+    var(--gradient-active) border-box;
+
+  --color-accent-soft: rgba(0, 175, 239, 0.2);
+  /* Accent como TEXTO e anel de foco (link ativo, opção selecionada,
+     foco de teclado). O --color-accent é de preenchimento e borda; como
+     texto ele não garante AA em todo tema — o ciano sobre o
+     --color-accent-soft fica em 4.16:1 no escuro. Aqui é o -400 (5.12
+     sobre o soft, 7.13 sobre o vidro). O claro redefine. */
+  --color-accent-text: var(--color-accent-400);
+  --color-highlight-soft: rgba(255, 208, 0, 0.2);
+  --color-success-soft: rgba(0, 214, 143, 0.2);
+  --color-danger-soft: rgba(255, 77, 109, 0.2);
+  --color-violet-soft: rgba(111, 97, 214, 0.2);
+  --color-pink-soft: rgba(237, 45, 102, 0.2);
+  --color-orange-soft: rgba(242, 111, 53, 0.2);
+  --color-gray-soft: rgba(139, 139, 158, 0.2);
+
+  /* ---------- Escalas de marca (100 claro → 900 escuro; 500 = base) ---------- */
+  --color-accent-100: #d9f3fd;
+  --color-accent-200: #b3e7fa;
+  --color-accent-300: #80d7f7;
+  --color-accent-400: #40c3f3;
+  --color-accent-500: #00afef;
+  --color-accent-600: #0095cb;
+  --color-accent-700: #007aa7;
+  --color-accent-800: #006083;
+  --color-accent-900: #004660;
+
+  --color-highlight-100: #fff8d9;
+  --color-highlight-200: #fff1b2;
+  --color-highlight-300: #ffe880;
+  --color-highlight-400: #ffdc40;
+  --color-highlight-500: #ffd000;
+  --color-highlight-600: #d9b100;
+  --color-highlight-700: #b29200;
+  --color-highlight-800: #8c7200;
+  --color-highlight-900: #665300;
+
+  --color-success-100: #d9f9ee;
+  --color-success-200: #b2f3dd;
+  --color-success-300: #80eac7;
+  --color-success-400: #40e0ab;
+  --color-success-500: #00d68f;
+  --color-success-600: #00b67a;
+  --color-success-700: #009664;
+  --color-success-800: #00764f;
+  --color-success-900: #005639;
+
+  --color-danger-100: #ffe4e9;
+  --color-danger-200: #ffcad3;
+  --color-danger-300: #ffa6b6;
+  --color-danger-400: #ff7a92;
+  --color-danger-500: #ff4d6d;
+  --color-danger-600: #d9415d;
+  --color-danger-700: #b2364c;
+  --color-danger-800: #8c2a3c;
+  --color-danger-900: #661f2c;
+
+  --color-violet-100: #e9e7f9;
+  --color-violet-200: #d4d0f3;
+  --color-violet-300: #b7b0ea;
+  --color-violet-400: #9388e0;
+  --color-violet-500: #6f61d6;
+  --color-violet-600: #5e52b6;
+  --color-violet-700: #4e4496;
+  --color-violet-800: #3d3576;
+  --color-violet-900: #2c2756;
+
+  --color-pink-100: #fce0e8;
+  --color-pink-200: #fac0d1;
+  --color-pink-300: #f696b3;
+  --color-pink-400: #f2628c;
+  --color-pink-500: #ed2d66;
+  --color-pink-600: #c92657;
+  --color-pink-700: #a61f47;
+  --color-pink-800: #821938;
+  --color-pink-900: #5f1229;
+
+  --color-orange-100: #fde9e1;
+  --color-orange-200: #fbd4c2;
+  --color-orange-300: #f8b79a;
+  --color-orange-400: #f59368;
+  --color-orange-500: #f26f35;
+  --color-orange-600: #ce5e2d;
+  --color-orange-700: #a94e25;
+  --color-orange-800: #853d1d;
+  --color-orange-900: #612c15;
+
+  --color-gray-100: #eeeef0;
+  --color-gray-200: #dcdce2;
+  --color-gray-300: #c5c5ce;
+  --color-gray-400: #a8a8b6;
+  --color-gray-500: #8b8b9e;
+  --color-gray-600: #767686;
+  --color-gray-700: #61616f;
+  --color-gray-800: #4c4c57;
+  --color-gray-900: #38383f;
+
+  /* ---------- Cores de dados (gráficos) ----------
+     Categóricas em ORDEM FIXA (1 ciano · 2 ouro · 3 violeta · 4 magenta),
+     validadas por modo contra daltonismo (ΔE CVD ≥ 8), visão normal
+     (ΔE ≥ 15) e contraste ≥ 3:1 com o fundo. Nunca cicle nem reordene;
+     success/danger ficam reservadas p/ status.
+
+     Passos próprios, independentes das cores de marca acima: nasceram
+     de accent/violet/pink (dark) antes do realinhamento de v1.5 com
+     assets/logo.svg, mas já validados nesses valores — mudar a marca
+     não invalida o gráfico, então não seguem accent/pink automaticamente. */
+  --chart-1: #0096c8;
+  --chart-2: #b29200;
+  --chart-3: #6f61d6;
+  --chart-4: #d4708f;
+  --chart-grid: rgba(255, 255, 255, 0.14);
+
+  /* ---------- Cores — TEMA ESCURO (padrão) ---------- */
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(255, 255, 255, 0.5);
+  --color-border-strong: #ffffff;
+  /* Contorno de superfície (Card, StatTile, tabela, Accordion, Navbar,
+     Sidebar, Dock…). É o --color-border em todo tema; o Flat separa
+     superfície do fundo só por tom e põe transparent. Controles,
+     campos e sobreposições (Modal, Popover, listas) seguem no
+     --color-border. */
+  --color-border-surface: var(--color-border);
+  --color-surface: rgba(255, 255, 255, 0.1);
+  /* Fundo dos campos (Input, Textarea, gatilho do Select, Checkbox, Radio). É a
+     superfície; o Flat usa o fundo da página, porque campo da cor do
+     card some dentro dele. */
+  --color-field: var(--color-surface);
+  --color-surface-hover: rgba(255, 255, 255, 0.5);
+  --color-thumb: #ffffff;
+
+  /* ---------- Fundo (recriação em CSS dos assets/bg-*.jpg) ----------
+     O fundo é composto por uma cor base + 4 "glows" (manchas de luz).
+     Cada glow tem um token de COR (--bg-glow-N) e um de POSIÇÃO
+     (--bg-glow-N-pos) — troque a cor, mova a posição, ou anime via JS
+     (ex.: scripts/glow-reactive.js aplica um parallax sutil que
+     reage ao movimento do mouse, mantendo cada glow no lugar). */
+  --bg-base: #111114;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-600) 55%, transparent);  /* ciano — canto superior direito, eco da pupila da logo */
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-700) 50%, transparent);    /* magenta — centro-direita, parada 60% do gradiente */
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-800) 60%, transparent); /* ciano profundo — borda esquerda */
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-700) 50%, transparent); /* laranja — canto inferior esquerdo, parada 100% do gradiente */
+
+  --bg-glow-1-pos: 102% -2%;
+  --bg-glow-2-pos: 72% 15%;
+  --bg-glow-3-pos: -4% 48%;
+  --bg-glow-4-pos: -4% 104%;
+
+  /* Tamanho de cada glow (largura altura da elipse) — também animável:
+     scripts/glow-reactive.js pulsa esses valores pra dar a "respiração"
+     de lava lamp. */
+  --bg-glow-1-size: 45% 42%;
+  --bg-glow-2-size: 58% 50%;
+  --bg-glow-3-size: 38% 46%;
+  --bg-glow-4-size: 46% 46%;
+
+  /* Textura por cima dos glows (papel, grão): primeira camada do
+     --bg-page, então aceita gradiente ou url(); none é nenhuma. */
+  --bg-texture: none;
+
+  /* A composição é definida uma única vez: os temas trocam apenas
+     os tokens de cor/posição acima. */
+  --bg-page:
+    var(--bg-texture),
+    radial-gradient(ellipse var(--bg-glow-1-size) at var(--bg-glow-1-pos), var(--bg-glow-1), transparent 78%),
+    radial-gradient(ellipse var(--bg-glow-2-size) at var(--bg-glow-2-pos), var(--bg-glow-2), transparent 82%),
+    radial-gradient(ellipse var(--bg-glow-3-size) at var(--bg-glow-3-pos), var(--bg-glow-3), transparent 80%),
+    radial-gradient(ellipse var(--bg-glow-4-size) at var(--bg-glow-4-pos), var(--bg-glow-4), transparent 80%);
+
+  /* Ícone do switch (lua vazada) — SVG embutido. Os outros estados
+     ficam em "Ícone do ThemeSwitch", depois dos temas. */
+  --icon-switch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a1a2e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/%3E%3C/svg%3E");
+
+  /* Chevron do Select — cor fixa no SVG (data URI não herda var()), uma versão por tema */
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Tokens do material F do Mothership Aerobubble (identificador técnico glass). */
+:root:is([data-ms-theme="glass"], :not([data-ms-theme])) {
+  /* Cantos mais arredondados reforçam a identidade Aerobubble. */
+  --radius-md: 32px;
+  --glass-f-face: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02) 42%, rgba(180,226,255,.07));
+  --glass-f-overlay: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02) 42%, rgba(180,226,255,.07)), rgba(16,24,38,.38);
+  --glass-f-edge: rgba(255,255,255,.8);
+  --glass-f-text-on-light: #26323a;
+  --glass-f-sheen: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.04) 45%, rgba(13,44,65,.20));
+  --glass-f-blur: 8px;
+  --glass-f-ring-shine: drop-shadow(0 1px 2px rgba(255,255,255,.25));
+  --glass-f-svg-highlight: rgba(255,255,255,.72);
+  --glass-f-svg-edge: rgba(255,255,255,.48);
+  --glass-f-ring-rim: rgba(255,255,255,.22);
+  --glass-f-svg-stroke: 2px;
+  --glass-f-ring-transition: .8s;
+  --glass-f-inset: inset 0 2px 2px rgba(255,255,255,.9), inset 2px 0 3px rgba(255,255,255,.4), inset 0 -1px 0 rgba(235,251,255,.5), inset 0 -3px 2px rgba(127,210,235,.24), inset 0 -5px 4px rgba(22,69,99,.15);
+  /* Relevo mais fino para acompanhar a ponta arredondada da barra. */
+  --glass-f-meter-inset: inset 0 0 0 1px rgba(235,251,255,.32), inset -1px 1px 2px rgba(255,255,255,.55), inset 0 -1px 2px rgba(13,44,65,.28);
+  --glass-f-shadow: var(--glass-f-inset), 0 18px 28px rgba(0,0,0,.34);
+}
+
+/* ---------- Glass escuro (o antigo Darker) ----------
+   Mesma base, glows, texto e bordas do Glass base, mas o vidro é escuro
+   (o fundo da página a 60%) em vez de claro. Lê como uma camada de
+   fumaça sobre os glows, não como um véu branco: mais baixo contraste de
+   luz, para uso noturno. Nasceu no rice do desktop do autor, onde virou
+   o tema da noite. Sem data-ms-theme, o tema é Glass. */
+[data-ms-mode="dark"]:is([data-ms-theme="glass"], :not([data-ms-theme])) {
+  --gradient-active-text-hover: var(--gradient-active-text);
+  --color-surface: color-mix(in srgb, var(--bg-base) 60%, transparent);
+  /* Hover sutil: o branco a 50% do escuro padrão acende demais sobre o
+     vidro escuro. */
+  --color-surface-hover: rgba(255, 255, 255, 0.15);
+}
+
+/* O modo escuro aplica um véu ao material F. */
+:root[data-ms-mode="dark"]:is([data-ms-theme="glass"], :not([data-ms-theme])) {
+  --glass-f-face: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02) 42%, rgba(180,226,255,.07)), rgba(17,17,20,.38);
+  --glass-f-overlay: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02) 42%, rgba(180,226,255,.07)), rgba(17,17,20,.62);
+}
+
+/* Redução de movimento: os gestos com duração encolhem até quase zero,
+   então quem usa os tokens já respeita a preferência sem media query
+   própria. A deriva não tem duração para encolher — quem a usa pausa a
+   animação na sua própria regra. Um tema que redefinir essas durações
+   precisa repetir este bloco, senão anula o 0.01s. Nenhum tema
+   redefine hoje, então o :root vale para todos. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-assentar-duration: 0.01s;
+    --motion-recolher-duration: 0.01s;
+    --motion-pulso-duration: 0.01s;
+  }
+}
+
+/* ---------- Cream base (o antigo claro) ----------
+   Seletor de um atributo só: vale também para o Cream escuro, que
+   herda daqui o que não redefinir. */
+[data-ms-theme="cream"] {
+  transition: var(--transition-slow);
+
+  /* Cores de dados do tema claro — mesmos matizes, passos próprios,
+     validados contra superfície branca */
+  --chart-1: #008eb9;
+  --chart-2: #9c8100;
+  --chart-3: #6f52b8;
+  --chart-4: #c2537f;
+  --chart-grid: rgba(0, 0, 0, 0.12);
+
+  /* Off-white quente (v1.8): o branco puro com texto preto (21:1)
+     estourava em telas grandes. Fundo creme, vidro marfim e texto
+     marrom quase preto (13.6:1 sobre o vidro) — o contraste cai, mas
+     segue muito acima de AA. */
+  --color-text: #26201a;
+  --color-text-muted: rgba(38, 32, 26, 0.7);
+  --color-border: rgba(38, 32, 26, 0.55); /* 3.45:1 sobre o fundo — mínimo de 3:1 para bordas de controle */
+  --color-border-strong: #26201a;
+  /* Vidro esbranquiçado, não escurecido: sobre os glows saturados do
+     fundo claro, um véu preto sujava a superfície pra um cinza/roxo
+     turvo que reduzia o contraste do texto escuro. Um véu branco
+     "lava" a cor por baixo pro efeito de vidro fosco de verdade.
+     O hover continua escurecendo (véu preto): sobre uma base já
+     branca, um hover também branco não dava pra perceber — o
+     escurecido é o que sinaliza "isto está sob o mouse" de verdade. */
+  --color-surface: rgba(245, 240, 230, 0.6);
+  --color-surface-hover: rgba(0, 0, 0, 0.15);
+  --color-thumb: #f5f0e6;
+
+  /* Accent do claro: um laranja lavado (o orange da logo com menos
+     saturação, matiz damasco) no lugar do ciano. O ciano é frio e claro
+     demais sobre o creme (2.1:1 sobre o vidro, frio contra o fundo
+     quente); o laranja combina com ele e continua dentro do degradê da
+     logo. Como preenchimento passa com o --color-on-accent (7.0:1).
+     Como texto/foco fica ~2:1; para isso existe o --color-accent-text. É a única cor de marca
+     que muda com o tema; as escalas --color-accent-* seguem ciano. */
+  --color-accent: #e19460;
+  --color-accent-soft: rgba(225, 148, 96, 0.22);
+  /* O mesmo laranja escurecido até AA: 5.32 sobre o vidro, 5.00 sobre
+     o fundo, 4.58 sobre o --color-accent-soft. Só para texto e foco —
+     escuro assim o laranja fica terroso, então não serve de preenchimento. */
+  --color-accent-text: #984a16;
+
+  /* Paradas escurecidas até 3:1 sobre o creme e o vidro marfim: ciano
+     -700 3.83/4.08 (o -600 fica em 2.70), rosa -600 4.26/4.54,
+     laranja -600 3.16/3.36. */
+  --gradient-active: linear-gradient(to left, var(--color-accent-700), var(--color-pink-600) 60%, var(--color-orange-600));
+  /* Texto: -800 nas três, 5.90/8.25/6.60 sobre o vidro (4.20/5.87/4.70
+     com o hover escurecendo). */
+  --gradient-active-text: linear-gradient(to left, var(--color-accent-800), var(--color-pink-800) 60%, var(--color-orange-800));
+  --gradient-active-text-hover: var(--gradient-active-text);
+  /* Vidro marfim sobre o painel de vidro marfim sumia: o item atual fica
+     quase opaco e um pouco mais claro que o painel, com sombra leve. */
+  --color-surface-selected: rgba(255, 253, 248, 0.9);
+  --shadow-selected: var(--shadow-xs);
+
+  --bg-base: #ebe4d8;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-200) 65%, transparent);  /* ciano claro — canto superior direito */
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-200) 60%, transparent);    /* rosa — centro-direita */
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-300) 60%, transparent);  /* ciano — borda esquerda */
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-200) 60%, transparent);  /* laranja claro — canto inferior esquerdo */
+
+  /* Chevron do Select no tema claro — mesmo traço, cor escura */
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2326201a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Cream escuro (D10, revisão de 2026-10-24) ----------
+   Paleta do e-ink do Paperpen com o que é do Cream: papel âmbar fosco
+   e tinta quase preta, mas com vidro, glows quentes, accent laranja
+   lavado e o gradiente da logo como ativo. "Escuro" aqui é baixar a
+   luz, não inverter: texto escuro sobre fundo meio-tom. Herda do Cream
+   base o accent, o --color-accent-soft e a transição. Como o papel é
+   meio-tom, accent como texto, ativo, danger, success e gráficos descem
+   de um a três passos. Contrastes sobre o papel e sobre o vidro já
+   composto nele. */
+[data-ms-theme="cream"][data-ms-mode="dark"] {
+  /* Mesma ordem de matiz, dois passos abaixo do Cream base. Sobre papel
+     e vidro: 3.62/4.66, 3.88/4.99, 4.20/5.40, 3.74/4.81. ΔE mínimo 41.1
+     na visão normal, 22.1/16.4/18.6 em protan/deutan/tritan. */
+  --chart-1: var(--color-accent-800);
+  --chart-2: var(--color-highlight-900);
+  --chart-3: var(--color-violet-700);
+  --chart-4: var(--color-pink-700);
+  --chart-grid: rgba(31, 28, 24, 0.14);
+
+  --color-text: #1f1c18;                         /* 8.79 sobre o papel, 11.30 sobre o vidro */
+  --color-text-muted: rgba(31, 28, 24, 0.78);    /* 6.43 sobre o vidro */
+  --color-border: rgba(31, 28, 24, 0.6);         /* 3.48 sobre o papel */
+  --color-border-strong: var(--color-text);
+  --color-surface: rgba(236, 226, 206, 0.6);
+  --color-surface-hover: rgba(0, 0, 0, 0.1);
+  /* Como no Cream base: o item atual fica quase opaco, um pouco mais
+     claro que o painel, com sombra leve. */
+  --color-surface-selected: rgba(242, 235, 221, 0.9);
+  --shadow-selected: var(--shadow-xs);
+  --color-thumb: #f2ebdd;
+
+  /* Texto e foco: 5.08 sobre o papel, 6.52 sobre o vidro (5.25 no hover). */
+  --color-accent-text: #6e330e;
+  --color-on-accent: #1e1712; /* 7.25 sobre o --color-accent */
+  /* Os de marca somem no papel (success 1.01). Como texto: danger -900
+     e success -900, 4.55/5.85 no success; danger acima. */
+  --color-danger: var(--color-danger-900);
+  --color-success: var(--color-success-900);
+  /* Escuros assim, o preenchimento pede texto branco: 11.68 no danger
+     (badge do sino), 8.79 no success; o ícone do Alert em success/danger
+     tem regra própria. */
+  --color-on-danger: var(--color-on-solid);
+
+  /* Anel: -800/-700/-800, 3.62/3.74/4.05 sobre o papel. Texto:
+     -900/-800/-900, mínimo 5.07 sobre o papel e 5.24 no hover. */
+  --gradient-active: linear-gradient(to left, var(--color-accent-800), var(--color-pink-700) 60%, var(--color-orange-800));
+  --gradient-active-text: linear-gradient(to left, var(--color-accent-900), var(--color-pink-800) 60%, var(--color-orange-900));
+  --gradient-active-text-hover: var(--gradient-active-text);
+
+  --bg-base: #c9b998;
+  --bg-glow-1: color-mix(in srgb, var(--color-orange-300) 38%, transparent);
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-300) 32%, transparent);
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-300) 22%, transparent);
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-200) 40%, transparent);
+
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231f1c18' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Paperpen base (D11) ----------
+   Papel quadriculado sobre glows em aquarela, caneta esferográfica
+   azul, sem vidro: desfoque e sombras zerados, contorno mais grosso.
+   Seletor de um atributo só: o escuro herda daqui o que não redefinir
+   (fontes, contorno, desfoque, sombras, hachura). Contrastes medidos
+   sobre o papel e sobre a superfície já composta nele (a superfície é
+   papel a 88%, então quase não muda: os glows são pastéis lavados).
+
+   As fontes não vêm carregadas, como a Outfit: quem usa o tema importa
+   Patrick Hand e Homemade Apple (Google Fonts). Uma página que não
+   aplica o tema não usa as famílias, e o navegador não baixa o arquivo
+   de fonte que nenhum texto usa. */
+[data-ms-theme="paperpen"] {
+  /* Patrick Hand foi a única manuscrita confortável em 14px, em tabela
+     e campo. Títulos e display em cursiva. Terminal em Maple Mono
+     itálico, que já é cursivo. */
+  --font-family: "Patrick Hand", "Comic Sans MS", cursive;
+  --font-family-display: "Homemade Apple", "Patrick Hand", cursive;
+  --font-mono-style: italic;
+  /* A Patrick Hand tem o "x" da Outfit (0.47 × 0.48 do tamanho), mas é
+     ~22% mais estreita e lê menor: corpo, campos e tabelas a 112,5%. Do
+     --text-lg para cima são títulos em Homemade Apple, que já é larga. */
+  --text-xs: calc(12px * 1.125);
+  --text-sm: calc(14px * 1.125);
+  --text-md: calc(16px * 1.125);
+
+  /* Contorno meio-termo: cantos levemente irregulares, como traço de mão. */
+  --radius-md: 48px 10px 40px 10px / 10px 40px 10px 48px;
+
+  /* Sem vidro: contorno no lugar de desfoque e sombra. */
+  --blur-glass: 0px;
+  --blur-soft: 0px;
+  --border-width: 1.5px;
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-selected: none;
+  --shadow-glow-accent: none;
+  --shadow-drop: drop-shadow(0 0 0 transparent);
+
+  /* Hachura de caneta: linhas de 2px na cor cheia e, entre elas, papel
+     a 18% por cima da cor, que dá a base aguada (cor a 82%). O texto
+     claro sobre ela passa pela base, a parte mais fraca (ver on-*). */
+  --fill-solid: repeating-linear-gradient(-55deg, transparent 0 2px, color-mix(in srgb, var(--bg-base) 18%, transparent) 2px 5px);
+
+  --paper-line: rgba(28, 63, 148, 0.13); /* quadriculado, na tinta da caneta */
+  /* Granulação (feTurbulence, sem imagem externa) e quadriculado de
+     24px. O .ms-page repete as camadas: a granulação é um ladrilho. */
+  --bg-texture:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(transparent 0 23px, var(--paper-line) 23px 24px),
+    repeating-linear-gradient(90deg, transparent 0 23px, var(--paper-line) 23px 24px);
+
+  --bg-base: #f7f3ea;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-200) 35%, transparent);
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-200) 30%, transparent);
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-300) 25%, transparent);
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-200) 30%, transparent);
+
+  --color-text: #1c3f94;                         /* 8.67 sobre o papel, 9.06 sobre a superfície */
+  --color-text-muted: rgba(28, 63, 148, 0.8);    /* 5.42 sobre a superfície */
+  --color-border: rgba(28, 63, 148, 0.75);       /* 4.64 sobre o papel */
+  --color-border-strong: var(--color-text);
+  --color-surface: rgba(251, 249, 243, 0.88);
+  --color-surface-hover: rgba(28, 63, 148, 0.08); /* texto 7.93 */
+  --color-surface-selected: rgba(251, 249, 243, 0.95);
+  --color-thumb: var(--bg-base);
+
+  /* O accent é a própria caneta: preenchimento, texto e foco (8.67). */
+  --color-accent: var(--color-text);
+  --color-accent-soft: rgba(28, 63, 148, 0.12);
+  --color-accent-text: var(--color-text);
+  /* Papel sobre a hachura: 5.54 na base da caneta (8.67 nas linhas). */
+  --color-on-accent: var(--bg-base);
+  --color-on-solid: var(--bg-base);
+  /* Caneta vermelha: 5.08/5.31 como texto. Papel sobre ela, cheia
+     (badge do sino), 5.08; sobre a hachura, só ícone, 3.95. */
+  --color-danger: #c62828;
+  --color-danger-soft: rgba(198, 40, 40, 0.12);
+  --color-on-danger: var(--bg-base);
+  --color-success: #2e7d32;                      /* 4.84 como texto (delta do StatTile) */
+  --color-success-soft: rgba(46, 125, 50, 0.12);
+  --color-highlight: #f2d400;
+  --color-highlight-soft: rgba(255, 230, 0, 0.45);
+  /* Ícone do Alert em papel sobre a hachura pede 3:1: laranja e cinza
+     de marca ficam em 2.26/2.39, o -700 dá 3.62/3.76. Violeta (3.22) e
+     rosa -600 (3.82) passam como estão. */
+  --color-orange: var(--color-orange-700);
+  --color-gray: var(--color-gray-700);
+
+  /* Os do Cream base: mesma ordem de matiz, papel parecido. Sobre papel
+     e superfície: 3.40/3.56, 3.41/3.57, 5.30/5.55, 3.92/4.10. ΔE mínimo
+     50 na visão normal, 19.7/18.8/33.9 em protan/deutan/tritan. */
+  --chart-1: #008eb9;
+  --chart-2: #9c8100;
+  --chart-3: #6f52b8;
+  --chart-4: #c2537f;
+  --chart-grid: rgba(28, 63, 148, 0.15);
+
+  /* Ativo em caneta vermelha, anel e texto: 5.08/5.31 (o hover escurece
+     a superfície até 4.65). */
+  --gradient-active: linear-gradient(var(--color-danger), var(--color-danger));
+  --gradient-active-text: var(--gradient-active);
+  --gradient-active-text-hover: var(--gradient-active);
+
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231c3f94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Paperpen escuro (D11, revisão de 2026-10-24) ----------
+   Caderno de papel azul escuro, na linha da caneta do base: papel tinta
+   azul, texto em off-white frio, quadriculado claro e glows em aquarela
+   escurecidos. As cores ficam, clareadas para o fundo escuro: caneta
+   azul clara, ativo em caneta vermelha, estados e gráficos. Contrastes
+   sobre o papel e sobre a superfície (papel 94% + branco). */
+[data-ms-theme="paperpen"][data-ms-mode="dark"] {
+  --paper-line: rgba(232, 237, 245, 0.08);
+
+  --bg-base: #1a2b5a;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-800) 35%, transparent);
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-900) 35%, transparent);
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-900) 35%, transparent);
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-900) 35%, transparent);
+
+  --color-text: #e8edf5;                         /* 11.62 sobre o papel, 9.75 sobre a superfície */
+  --color-text-muted: rgba(232, 237, 245, 0.75); /* 6.26 sobre a superfície */
+  --color-border: rgba(232, 237, 245, 0.5);      /* 4.06 sobre o papel */
+  --color-surface: color-mix(in srgb, var(--bg-base) 94%, white);
+  --color-surface-hover: rgba(232, 237, 245, 0.08); /* texto 7.85 */
+  --color-surface-selected: color-mix(in srgb, var(--bg-base) 88%, white);
+
+  /* Caneta azul clara: 7.01/5.88 como texto e foco (4.73 no hover).
+     Papel sobre a hachura dela: 5.24 na base. */
+  --color-accent: #9fb8ff;
+  --color-accent-soft: rgba(159, 184, 255, 0.16);
+  --color-accent-text: var(--color-accent);
+
+  /* Caneta vermelha clara: 6.02 como texto e 4.85 no hover (item perigoso
+     do DropdownMenu); papel sobre ela, 7.18 cheia e 5.29 na hachura. */
+  --color-danger: #ffa49b;
+  --color-danger-soft: rgba(255, 164, 155, 0.16);
+  --color-success: #81c784;                      /* 5.69 como texto; ícone na hachura 5.06 */
+  --color-success-soft: rgba(129, 199, 132, 0.16);
+  --color-highlight: #ffd54f;
+  --color-highlight-soft: rgba(255, 213, 79, 0.2);
+  --color-on-highlight: var(--bg-base);          /* 6.96 na hachura */
+  /* -400 de marca, papel sobre a hachura acima de 3:1: violeta 3.49,
+     rosa 3.43, laranja 4.49, cinza 4.41. */
+  --color-violet: var(--color-violet-400);
+  --color-pink: var(--color-pink-400);
+  --color-orange: var(--color-orange-400);
+  --color-gray: var(--color-gray-400);
+  --color-violet-soft: rgba(147, 136, 224, 0.18);
+  --color-pink-soft: rgba(242, 98, 140, 0.18);
+  --color-orange-soft: rgba(245, 147, 104, 0.18);
+  --color-gray-soft: rgba(168, 168, 182, 0.18);
+
+  /* Os do Cream escuro antigo, um passo acima do Glass. Sobre papel e
+     superfície: 6.71/5.63, 6.66/5.59, 4.45/3.73, 4.49/3.76. ΔE mínimo
+     47 na visão normal, 21.9/12.6/38.7 em protan/deutan/tritan. */
+  --chart-1: var(--color-accent-400);
+  --chart-2: var(--color-highlight-600);
+  --chart-3: var(--color-violet-400);
+  --chart-4: var(--color-pink-400);
+  --chart-grid: rgba(232, 237, 245, 0.14);
+
+  /* Ativo no mesmo vermelho: anel 7.18/6.02. Como texto no hover cai
+     para 4.85 e vira a cor do texto (7.85), como no Glass base. */
+  --gradient-active: linear-gradient(var(--color-danger), var(--color-danger));
+  --gradient-active-text: var(--gradient-active);
+  --gradient-active-text-hover: linear-gradient(var(--color-text), var(--color-text));
+
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e8edf5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Flat base (D12) ----------
+   Neutro e plano: cinzas zinco, superfície opaca, sem vidro nem
+   sombra, glows bem sutis. A marca só no sinal de ativo e nos estados;
+   o accent é tinta (preto no base, branco no escuro). Superfície
+   separada do fundo só por tom, um passo acima, sem contorno; campos e
+   controles mantêm a borda de 3:1. Seletor de um atributo só: o escuro
+   herda daqui o desfoque, as sombras e a separação. */
+[data-ms-theme="flat"] {
+  --blur-glass: 0px;
+  --blur-soft: 0px;
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-selected: none;
+  --shadow-glow-accent: none;
+  --shadow-drop: drop-shadow(0 0 0 transparent);
+
+  --color-border-surface: transparent;
+  --color-field: var(--bg-base);
+
+  --bg-base: #f4f4f5;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-200) 22%, transparent);
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-200) 16%, transparent);
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-300) 14%, transparent);
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-200) 18%, transparent);
+
+  --color-text: #18181b;                         /* 16.12 sobre o fundo, 17.72 sobre a superfície */
+  --color-text-muted: rgba(24, 24, 27, 0.68);    /* 6.09 sobre a superfície, 5.85 sobre o fundo */
+  --color-border: rgba(24, 24, 27, 0.48);        /* 3.12 sobre o fundo, 3.18 sobre a superfície */
+  --color-border-strong: var(--color-text);
+  --color-surface: #ffffff;                      /* 1.10 contra o fundo: a separação é o tom */
+  --color-surface-hover: rgba(24, 24, 27, 0.06); /* texto 15.71 */
+  /* O item atual é a própria superfície: quem marca é o anel. */
+  --color-surface-selected: #ffffff;
+  --color-thumb: #ffffff;
+
+  /* Accent é a tinta: preenchimento, texto e foco. */
+  --color-accent: #18181b;
+  --color-accent-soft: rgba(24, 24, 27, 0.08);
+  --color-accent-text: var(--color-accent);
+  --color-on-accent: #fafafa;                    /* 16.97 sobre o accent */
+  /* danger e success ficam os de marca, como no Cream base: danger 3.21
+     sobre a superfície, success 1.91 (só como texto falham AA). */
+
+  /* Os do Cream base. Sobre fundo e superfície: 3.43/3.77, 3.44/3.78,
+     5.34/5.87, 3.95/4.34. */
+  --chart-1: #008eb9;
+  --chart-2: #9c8100;
+  --chart-3: #6f52b8;
+  --chart-4: #c2537f;
+  --chart-grid: rgba(24, 24, 27, 0.12);
+
+  /* Paradas do Cream base. Anel sobre fundo e superfície: ciano -700
+     4.40/4.84, rosa -600 4.90/5.39, laranja -600 3.63/3.99. Texto -800:
+     7.00/9.79/7.83 sobre a superfície, 6.20/8.68/6.94 no hover. */
+  --gradient-active: linear-gradient(to left, var(--color-accent-700), var(--color-pink-600) 60%, var(--color-orange-600));
+  --gradient-active-text: linear-gradient(to left, var(--color-accent-800), var(--color-pink-800) 60%, var(--color-orange-800));
+  --gradient-active-text-hover: var(--gradient-active-text);
+
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2318181b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Flat escuro (D12) ----------
+   Mesmo desenho em zinco escuro. Ativo, estados e gráficos voltam aos
+   do Glass. Contrastes sobre o fundo e a superfície. */
+[data-ms-theme="flat"][data-ms-mode="dark"] {
+  --bg-base: #18181b;
+  --bg-glow-1: color-mix(in srgb, var(--color-accent-800) 18%, transparent);
+  --bg-glow-2: color-mix(in srgb, var(--color-pink-900) 18%, transparent);
+  --bg-glow-3: color-mix(in srgb, var(--color-accent-900) 16%, transparent);
+  --bg-glow-4: color-mix(in srgb, var(--color-orange-900) 18%, transparent);
+
+  --color-text: #f4f4f5;                            /* 16.12 sobre o fundo, 14.25 sobre a superfície */
+  --color-text-muted: rgba(244, 244, 245, 0.7);     /* 7.67 sobre a superfície */
+  --color-border: rgba(244, 244, 245, 0.42);        /* 3.82 sobre o fundo, 3.70 sobre a superfície */
+  --color-surface: #232327;                         /* 1.13 contra o fundo */
+  --color-surface-hover: rgba(244, 244, 245, 0.08); /* texto 11.33 */
+  --color-surface-selected: #2a2a2f;
+  --color-thumb: #f4f4f5;
+
+  --color-accent: #f4f4f5;
+  --color-accent-soft: rgba(244, 244, 245, 0.1);
+  --color-on-accent: #18181b;                       /* 16.12 sobre o accent */
+  /* danger 4.87 e success 8.21 sobre a superfície. */
+
+  /* Os do Glass. Sobre fundo e superfície: 5.23/4.62, 5.91/5.22,
+     3.68/3.25, 5.50/4.86. */
+  --chart-1: #0096c8;
+  --chart-2: #b29200;
+  --chart-3: #6f61d6;
+  --chart-4: #d4708f;
+  --chart-grid: rgba(244, 244, 245, 0.14);
+
+  /* Paradas do Glass. Anel -500 sobre a superfície 6.25/3.85/5.29 (3.51
+     no rosa sobre o selecionado). Texto -400: 7.69/5.15/6.90; no hover o
+     rosa cai a 4.09, então vira a cor do texto (11.33), como no Glass. */
+  --gradient-active: linear-gradient(to left, var(--color-accent-500), var(--color-pink-500) 60%, var(--color-orange-500));
+  --gradient-active-text: linear-gradient(to left, var(--color-accent-400), var(--color-pink-400) 60%, var(--color-orange-400));
+  --gradient-active-text-hover: linear-gradient(var(--color-text), var(--color-text));
+
+  --icon-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f4f4f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Ícone do ThemeSwitch ----------
+   A regra é a de iconeDoModo (theme-state.ts), que o ThemeMenu usa: lua
+   vazada no Glass base (o :root, que já é escuro), sol no base dos
+   outros temas, lua cheia em qualquer escuro. Mudou lá, muda aqui.
+   Os dois seletores pesam (0,2,0), acima do bloco de um tema só, então
+   valem para os temas que ainda vão ganhar bloco; o do escuro vence o do
+   sol por vir depois. */
+[data-ms-theme]:not([data-ms-theme="glass"]) {
+  --icon-switch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a1a2e' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='4' fill='%23ffd000' stroke='none'/%3E%3Cpath d='M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4'/%3E%3C/svg%3E");
+}
+
+:root[data-ms-mode="dark"] {
+  --icon-switch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%231a1a2e'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/%3E%3Ccircle cx='17' cy='5' r='1'/%3E%3Ccircle cx='20.5' cy='9' r='0.8'/%3E%3C/svg%3E");
+}
+
+/* Paleta mais luminosa para gráficos sobre superfícies escuras.
+   Mantém a ordem das séries; contraste e distinção visual precisam de
+   nova validação nos componentes e não herdam os números anteriores. */
+:root[data-ms-mode="dark"]:is([data-ms-theme="glass"], :not([data-ms-theme]), [data-ms-theme="flat"], [data-ms-theme="paperpen"]) {
+  --chart-1: #38c9f2;
+  --chart-2: #f3d45b;
+  --chart-3: #b69aff;
+  --chart-4: #ff9cbd;
+}
